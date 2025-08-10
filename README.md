@@ -17,5 +17,5 @@
 
 ### 📊 GitHub Stats
 <!-- GitHub Readme Stats -->
-<img src="https://github-readme-stats.vercel.app/api?username=YOURUSERNAME&show_icons=true" height="165">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOURUSERNAME&layout=compact" height="165">
+<img src="https://github-readme-stats.vercel.app/api?username=BornaBoyafraz&show_icons=true" height="165">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BornaBoyafraz&layout=compact" height="165">
