@@ -22,11 +22,13 @@
 <img src="https://github-readme-stats.vercel.app/api?username=BornaBoyafraz&show_icons=true" height="165">  
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BornaBoyafraz&layout=compact" height="165">
 
-
+    </td>
+    <td valign="top">
 
 <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="200">  
 <img src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" width="200">  
 <img src="https://media.giphy.com/media/2IudUHdI075HL02Pkk/giphy.gif" width="200">
 
+    </td>
   </tr>
 </table>
