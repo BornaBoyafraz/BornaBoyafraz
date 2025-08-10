@@ -10,7 +10,7 @@
 
 ### 🧰 Tech Stack
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)
-![JS](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)
+![Java](https://img.shields.io/badge/Java-007396?logo=java&logoColor=fff)
 ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)
 ![Unity](https://img.shields.io/badge/Unity-000000?logo=unity&logoColor=fff)
 ![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-313131?logo=unrealengine&logoColor=fff)
