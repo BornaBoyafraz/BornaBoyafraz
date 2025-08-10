@@ -1,16 +1,22 @@
 ## Hi there 👋
 
-<!--
-**BornaBoyafraz/BornaBoyafraz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<h1 align="center">Hi 👋, I'm Borna Boyafraz AKA Borna Afraz</h1>
+<p align="center">A 16y/o developer from Toronto, Canada</p>
 
-Here are some ideas to get you started:
+- 🔭 I’m currently working on a Self Made GTA 6
+- 🌱 I’m learning Machine Learning using Python
+- 💬 Ask me about Python, Java, Unity, Unreal Engine
+- 📫 How to reach me: bornaboyafraz@gmail.com
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+
+### 🧰 Tech Stack
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)
+![JS](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)
+
+### 📊 GitHub Stats
+<!-- GitHub Readme Stats -->
+<img src="https://github-readme-stats.vercel.app/api?username=YOURUSERNAME&show_icons=true" height="165">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOURUSERNAME&layout=compact" height="165">
+
+
