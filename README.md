@@ -15,6 +15,11 @@
 ![Unity](https://img.shields.io/badge/Unity-000000?logo=unity&logoColor=fff)
 ![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-313131?logo=unrealengine&logoColor=fff)
 
+### 🎥 Fun GIFs
+<img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="200"> 
+<img src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" width="200"> 
+<img src="https://media.giphy.com/media/2IudUHdI075HL02Pkk/giphy.gif" width="200">
+
 ### 📊 GitHub Stats
 <!-- GitHub Readme Stats -->
 <img src="https://github-readme-stats.vercel.app/api?username=BornaBoyafraz&show_icons=true" height="165">
