@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Borna Boyafraz AKA Borna Afraz</h1>
 <p align="center">A 16y/o developer from Toronto, Canada</p>
 
-- 🔭 I’m currently working on a self-made GTA 6 and the ShooterGame
+- 🔭 I’m currently working on a self-made GTA 6 and a Shooter Game
 - 🌱 I’m learning Machine Learning using Python
 - 💬 Ask me about Python, Java, Unity, Unreal Engine
 - 🎮 Gamer: Minecraft, FIFA, Red Dead Redemption 2
@@ -20,11 +20,9 @@
 
 ### 📊 GitHub Stats
 <img src="https://github-readme-stats.vercel.app/api?username=BornaBoyafraz&show_icons=true" height="165">  
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BornaBoyafraz&layout=compact" height="165">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BornaBoyafraz&layout=compact" height="165">  
 
-    </td>
-    <td valign="top">
-
+### 🎥 Fun GIFs
 <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="200">  
 <img src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" width="200">  
 <img src="https://media.giphy.com/media/2IudUHdI075HL02Pkk/giphy.gif" width="200">
