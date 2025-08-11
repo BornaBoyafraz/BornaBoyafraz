@@ -27,9 +27,7 @@
 <div>
 
 ### 🎥 My Mode all time
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjUyOXdwZ242b3c2NWdhMGFwMGc2MnNnbzQwZXZ6NXlsMDQ3dnA4MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qgQUggAC3Pfv687qPC/giphy.gif" width="200">  
-<img src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" width="200">  
-<img src="https://media.giphy.com/media/2IudUHdI075HL02Pkk/giphy.gif" width="200">
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjUyOXdwZ242b3c2NWdhMGFwMGc2MnNnbzQwZXZ6NXlsMDQ3dnA4MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qgQUggAC3Pfv687qPC/giphy.gif" width="600"> 
 
 </div>
 
