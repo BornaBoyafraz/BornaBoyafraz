@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Borna Boyafraz AKA Borna Afraz</h1>
 <p align="center">A 16y/o developer from Toronto, Canada</p>
 
-- 🔭 I’m currently working on a Self Made GTA 6
+- 🔭 I’m currently working on a Self Made GTA 6 and the ShooterGame
 - 🌱 I’m learning Machine Learning using Python
 - 💬 Ask me about Python, Java, Unity, Unreal Engine
 - 🎮 Gamer: Minecraft, FIFA, Red Dead Redemption 2
