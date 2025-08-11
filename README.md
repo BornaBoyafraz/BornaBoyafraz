@@ -28,6 +28,8 @@
 
 ### 🎥 My Mode all time
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjUyOXdwZ242b3c2NWdhMGFwMGc2MnNnbzQwZXZ6NXlsMDQ3dnA4MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qgQUggAC3Pfv687qPC/giphy.gif" width="250"> 
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3MGZxaGd6NXBkNTd3Y3hmaWZlMDE2MmpiY25iaWxnbjk2NTF4cW9oYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1jacdrRjaAMZN0u8Gd/giphy.gif" width="250"> 
+
 
 </div>
 
