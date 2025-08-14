@@ -16,10 +16,6 @@
 - Gym Goer 🏋️
 - Bilingual: Persian & English 🗣️
 
-<table>
-  <tr>
-    <td valign="top">
-
 ### 🧰 Tech Stack
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)  
 ![Java](https://img.shields.io/badge/Java-007396?logo=java&logoColor=fff)  
@@ -35,7 +31,3 @@
 <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="200">  
 <img src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" width="200">  
 <img src="https://media.giphy.com/media/2IudUHdI075HL02Pkk/giphy.gif" width="200">
-
-    </td>
-  </tr>
-</table>
