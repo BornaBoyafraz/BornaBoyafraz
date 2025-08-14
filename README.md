@@ -7,9 +7,18 @@
 - 🎮 Gamer: Minecraft, FIFA, Red Dead Redemption 2
 - 📫 How to reach me: bornaboyafraz@gmail.com
 
-<div style="display: flex; align-items: flex-start; gap: 20px;">
+### 🛠 Skills
+- Algorithms 🧮
+- Mathematics 📐
+- Troubleshooting 🛠️
+- Learning Machine Learning 🤖
+- Chess ♟️
+- Gym Goer 🏋️
+- Bilingual: Persian & English 🗣️
 
-<div>
+<table>
+  <tr>
+    <td valign="top">
 
 ### 🧰 Tech Stack
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)  
@@ -20,16 +29,11 @@
 
 ### 📊 GitHub Stats
 <img src="https://github-readme-stats.vercel.app/api?username=BornaBoyafraz&show_icons=true" height="165">  
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BornaBoyafraz&layout=compact" height="165">  
-
-</div>
-
-<div>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BornaBoyafraz&layout=compact" height="165">
 
 ### 🎥 My Mode all time
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjUyOXdwZ242b3c2NWdhMGFwMGc2MnNnbzQwZXZ6NXlsMDQ3dnA4MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qgQUggAC3Pfv687qPC/giphy.gif" width="250"> 
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjUyOXdwZ242b3c2NWdhMGFwMGc2MnNnbzQwZXZ6NXlsMDQ3dnA4MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qgQUggAC3Pfv687qPC/giphy.gif" width="250">
 
-
-</div>
-
-</div>
+    </td>
+  </tr>
+</table>
