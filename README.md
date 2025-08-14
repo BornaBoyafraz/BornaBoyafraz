@@ -17,11 +17,7 @@
 - Bilingual: Persian & English 🗣️
 
 ### 🧰 Tech Stack
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)  
-![Java](https://img.shields.io/badge/Java-007396?logo=java&logoColor=fff)  
-![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)  
-![Unity](https://img.shields.io/badge/Unity-000000?logo=unity&logoColor=fff)  
-![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-313131?logo=unrealengine&logoColor=fff)  
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff) ![Java](https://img.shields.io/badge/Java-007396?logo=java&logoColor=fff) ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff) ![Unity](https://img.shields.io/badge/Unity-000000?logo=unity&logoColor=fff) ![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-313131?logo=unrealengine&logoColor=fff)
 
 ### 📊 GitHub Stats
 <img src="https://github-readme-stats.vercel.app/api?username=BornaBoyafraz&show_icons=true" height="165">  
