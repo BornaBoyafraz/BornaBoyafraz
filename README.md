@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Borna Boyafraz AKA Borna Afraz</h1>
 <p align="center">A 17y/o developer from Toronto, Canada</p>
 
-- 🔭 I’m currently working on a Self Made GTA 6 and an Calory Calculator app and my newst game is Tic-Tac-Toe using C++!
+- 🔭 I’m currently working on a Self Made GTA 6and my newst program is Calory Tracker using PYTHON! ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)
 - 🌱 I’m learning Machine Learning using Python
 - 💬 Ask me about Python, Java, Unity, Unreal Engine
 - 🎮 Gamer: Minecraft, FIFA, Red Dead Redemption 2
