@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on a Self Made GTA 6and my newst program is Calory Tracker using Python !<br>👯 I’m looking to collaborate on Python and unreal Engine<br>🤝 I’m looking for help with Machine Learning<br>🌱 I’m currently learning Machine Learning <br>💬 Ask me about Python, Unreal Engine, Unity and Java
+🔭 I’m currently working on a Self Made GTA6 and my newst program is Calory Tracker using Python !<br>👯 I’m looking to collaborate on Python and unreal Engine<br>🤝 I’m looking for help with Machine Learning<br>🌱 I’m currently learning Machine Learning <br>💬 Ask me about Python, Unreal Engine, Unity and Java
 
 
 ## 🌐 Socials:
