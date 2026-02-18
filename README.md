@@ -1,5 +1,6 @@
 # 💫 About Me:
 🌐 **Portfolio:** [bornaba.com](https://bornaba.com)  
+💼 **LinkedIn:** [linkedin.com/in/bornaboyafraz](https://www.linkedin.com/in/bornaboyafraz/)
 
 🔭 I’m currently working on a self-made GTA6-inspired project and my newest program is **AI Search Agent**, built using Python and Vibe Coding with ChatGPT.  
 👯 I’m looking to collaborate on Python and Unreal Engine projects.  
@@ -10,8 +11,9 @@
 ---
 
 ## 🌐 Socials:
-[![Website](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://bornaba.com)
-[![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:bornaboyafraz@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://bornaba.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bornaboyafraz/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:bornaboyafraz@gmail.com)
 
 ---
 
