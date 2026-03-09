@@ -2,7 +2,7 @@
 🌐 **Portfolio:** [bornaba.com](https://bornaba.com)  
 💼 **LinkedIn:** [linkedin.com/in/bornaboyafraz](https://www.linkedin.com/in/bornaboyafraz/)
 
-🔭 I’m currently working on a self-made GTA6-inspired project and my newest program is **AI Search Agent**, built using Python and Vibe Coding with ChatGPT.  
+🔭 I’m currently working on a AI Agent and my newest program is **q neo**, built using Python and Vibe Coding with ChatGPT and CODEX.  
 👯 I’m looking to collaborate on Python and Unreal Engine projects.  
 🤝 I’m looking for help with Machine Learning.  
 🌱 I’m currently learning and exploring Machine Learning.  
