@@ -2,8 +2,8 @@
 🌐 **Portfolio:** [bornaba.com](https://bornaba.com)  
 💼 **LinkedIn:** [linkedin.com/in/bornaboyafraz](https://www.linkedin.com/in/bornaboyafraz/)
 
-🔭 I’m currently working on a AI Agent and my newest program is **q neo**, built using Python and Vibe Coding with ChatGPT and Claude.  
-👯 I’m looking to collaborate on Python and Unreal Engine projects.  
+🔭 I’m currently working on SafeWalk and my newest program is **DebtGuard**.  
+👯 I’m looking to collaborate on Python and MLL project.  
 🤝 I’m looking for help with Machine Learning.  
 🌱 I’m currently learning and exploring Machine Learning.  
 💬 Ask me about Python, Unreal Engine, Unity, and Java.
