@@ -1,10 +1,15 @@
 name: Update profile art
 
 "on":
+  # Re-scrape the whole-account contribution calendar often, so a push to
+  # ANY of your repos shows up here within ~15 min. GitHub can't trigger
+  # this workflow from a push to a different repo, so we poll instead.
+  # (Public repo -> Actions minutes are free. Offset from :00 because
+  #  GitHub delays schedules that land on the top of the hour.)
   schedule:
-    - cron: "17 6 * * *"   # ~06:17 UTC daily
+    - cron: "3,18,33,48 * * * *"
   workflow_dispatch: {}
-  push:
+  push:                     # a push to THIS repo refreshes it immediately
     branches: [main]
 
 permissions:

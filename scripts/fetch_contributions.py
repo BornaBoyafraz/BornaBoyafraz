@@ -73,9 +73,11 @@ def derive(days: list[dict]) -> dict:
     for d in days:
         months[d["date"][:7]] = months.get(d["date"][:7], 0) + d["count"]
 
+    # NB: deliberately no "fetched" timestamp — it would change every run
+    # and make the daily/15-min job commit even when nothing else changed.
+    # git already records when each refresh landed.
     return {
         "user": USERNAME,
-        "fetched": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "total": total,
         "best": {"date": best["date"], "count": best["count"]},
         "streak_current": current,
