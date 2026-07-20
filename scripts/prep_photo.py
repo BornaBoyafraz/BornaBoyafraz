@@ -28,6 +28,17 @@ def main() -> None:
     # 1. Isolate the subject.
     subject = remove(Image.open(src)).convert("RGBA")
 
+    # 1b. Crop to the subject's bounding box (+padding) so the ASCII grid
+    #     spends its rows on the person, not empty background.
+    bbox = subject.split()[3].getbbox()
+    if bbox:
+        pad = round(0.04 * max(subject.width, subject.height))
+        left = max(0, bbox[0] - pad)
+        top = max(0, bbox[1] - pad)
+        right = min(subject.width, bbox[2] + pad)
+        bottom = min(subject.height, bbox[3] + pad)
+        subject = subject.crop((left, top, right, bottom))
+
     # 2. CLAHE on the luminance channel — gives a flatly-lit face real
     #    highlights and shadows so the ASCII ramp has something to map.
     rgba = np.array(subject)

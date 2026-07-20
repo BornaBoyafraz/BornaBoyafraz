@@ -1,4 +1,6 @@
 .venv/
+.venv-portrait/
 __pycache__/
+preview.html
 source-photo.*
 source-prepped.png

@@ -15,24 +15,23 @@ only renders a profile README from a **public** repo named exactly
    `gh repo rename BornaBoyafraz -R BornaBoyafraz/BornaBoyafrazProfile`).
 3. Keep it public.
 
-## 2. Turn the banner into your portrait
+## 2. Regenerate the portrait (already done once)
 
-Right now `borna-ascii.svg` is a block-letter "BORNA" banner. To replace
-it with an ASCII portrait of your photo:
+`borna-ascii.svg` is the ASCII portrait built from your photo. To redo it
+with a different photo, use a **Python 3.11** venv — the background
+remover (`rembg` + `onnxruntime`) has no wheels for 3.12+:
 
 ```sh
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r scripts/requirements.txt
-python scripts/prep_photo.py path/to/your-photo.jpg   # writes source-prepped.png
-python scripts/make_ascii_svg.py                      # now renders the portrait
+python3.11 -m venv .venv-portrait && source .venv-portrait/bin/activate
+pip install pillow numpy opencv-python-headless rembg onnxruntime
+python scripts/prep_photo.py path/to/your-photo.jpg   # removes bg, crops, CLAHE -> source-prepped.png
+python scripts/make_ascii_svg.py                      # source-prepped.png -> borna-ascii.svg
 ```
 
-Use a well-lit photo with a clear subject; the script removes the
-background, boosts contrast (CLAHE), and composites onto white so only
-you print — the background becomes spaces.
-
-Then commit `borna-ascii.svg` (you can gitignore `source-prepped.png` if
-you don't want the photo derivative in the repo).
+Use a well-lit photo with a clear subject; the script isolates you, crops
+to your bounding box, boosts contrast, and composites onto white so only
+you print (the background becomes spaces). `source-photo.*` and
+`source-prepped.png` are gitignored — only `borna-ascii.svg` is committed.
 
 ## 3. Keep the heatmap fresh
 
