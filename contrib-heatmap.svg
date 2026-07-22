@@ -306,7 +306,7 @@
 <rect x="622" y="44" width="11" height="11" rx="2.5" fill="#161b22" class="c" style="animation-delay:0.902s"/>
 <rect x="622" y="58" width="11" height="11" rx="2.5" fill="#161b22" class="c" style="animation-delay:0.924s"/>
 <rect x="622" y="72" width="11" height="11" rx="2.5" fill="#006d32" class="c" style="animation-delay:0.946s"/>
-<rect x="622" y="86" width="11" height="11" rx="2.5" fill="#006d32" class="c" style="animation-delay:0.968s"/>
+<rect x="622" y="86" width="11" height="11" rx="2.5" fill="#0e4429" class="c" style="animation-delay:0.968s"/>
 <rect x="622" y="100" width="11" height="11" rx="2.5" fill="#69f0a0" class="c" style="animation-delay:0.990s"/>
 <rect x="622" y="114" width="11" height="11" rx="2.5" fill="#0e4429" class="c" style="animation-delay:1.012s"/>
 <rect x="622" y="128" width="11" height="11" rx="2.5" fill="#006d32" class="c" style="animation-delay:1.034s"/>
@@ -325,7 +325,7 @@
 <rect x="650" y="114" width="11" height="11" rx="2.5" fill="#006d32" class="c" style="animation-delay:1.056s"/>
 <rect x="650" y="128" width="11" height="11" rx="2.5" fill="#006d32" class="c" style="animation-delay:1.078s"/>
 <rect x="664" y="44" width="11" height="11" rx="2.5" fill="#161b22" class="c" style="animation-delay:0.968s"/>
-<rect x="664" y="58" width="11" height="11" rx="2.5" fill="#006d32" class="c" style="animation-delay:0.990s"/>
+<rect x="664" y="58" width="11" height="11" rx="2.5" fill="#0e4429" class="c" style="animation-delay:0.990s"/>
 <rect x="664" y="72" width="11" height="11" rx="2.5" fill="#161b22" class="c" style="animation-delay:1.012s"/>
 <rect x="664" y="86" width="11" height="11" rx="2.5" fill="#0e4429" class="c" style="animation-delay:1.034s"/>
 <rect x="664" y="100" width="11" height="11" rx="2.5" fill="#161b22" class="c" style="animation-delay:1.056s"/>
@@ -379,10 +379,10 @@
 <rect x="762" y="86" width="11" height="11" rx="2.5" fill="#161b22" class="c" style="animation-delay:1.188s"/>
 <rect x="762" y="100" width="11" height="11" rx="2.5" fill="#0e4429" class="c" style="animation-delay:1.210s"/>
 <rect x="762" y="114" width="11" height="11" rx="2.5" fill="#161b22" class="c" style="animation-delay:1.232s"/>
-<rect x="762" y="128" width="11" height="11" rx="2.5" fill="#39d353" class="c" style="animation-delay:1.254s"/>
+<rect x="762" y="128" width="11" height="11" rx="2.5" fill="#26a641" class="c" style="animation-delay:1.254s"/>
 <rect x="776" y="44" width="11" height="11" rx="2.5" fill="#0e4429" class="c" style="animation-delay:1.144s"/>
 <rect x="776" y="58" width="11" height="11" rx="2.5" fill="#26a641" class="c" style="animation-delay:1.166s"/>
-<rect x="776" y="72" width="11" height="11" rx="2.5" fill="#39d353" class="c" style="animation-delay:1.188s"/>
+<rect x="776" y="72" width="11" height="11" rx="2.5" fill="#26a641" class="c" style="animation-delay:1.188s"/>
 <rect x="776" y="86" width="11" height="11" rx="2.5" fill="#39d353" class="c" style="animation-delay:1.210s"/>
 <text x="48" y="165" fill="#8b949e">Less</text>
 <rect x="82" y="155" width="11" height="11" rx="2.5" fill="#161b22"/>
@@ -392,5 +392,5 @@
 <rect x="138" y="155" width="11" height="11" rx="2.5" fill="#39d353"/>
 <rect x="152" y="155" width="11" height="11" rx="2.5" fill="#69f0a0"/>
 <text x="170" y="165" fill="#8b949e">More</text>
-<text x="787" y="165" text-anchor="end" fill="#c9d1d9">275 contributions in the last year · streak 5d · longest 9d · best 30 on 2026-05-07</text>
+<text x="787" y="165" text-anchor="end" fill="#c9d1d9">279 contributions in the last year · streak 5d · longest 9d · best 30 on 2026-05-07</text>
 </svg>
