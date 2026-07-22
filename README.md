@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Borna%20Afraz&fontSize=58&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=Developer%20%7C%20Builder%20%7C%20Exploring%20AI%2FML%20%26%20Game%20Dev&descAlignY=60&descSize=18&v=2" width="100%" />
+<img src="./profile-header.svg" width="100%" alt="Borna Afraz — Developer, Builder, Exploring AI/ML and Game Dev" />
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=8B5CF6&center=true&vCenter=true&width=680&height=48&lines=Software+Developer+%26+Builder;Shipping+AI%2FML+%2B+full-stack+%2B+game+projects;Python+%7C+TypeScript+%7C+Java+%7C+C%23+%7C+C%2B%2B;Exploring+LLM+safety%2C+agents+%26+systems&v=2" alt="Typing SVG" /></a>
 
@@ -286,6 +286,6 @@ focus:
 
 > _Build things that work end-to-end — then make them better._
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&v=2" width="100%" />
+<img src="./profile-footer.svg" width="100%" alt="Purple gradient footer" />
 
 </div>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="200" viewBox="0 0 1200 200" role="img" aria-labelledby="title desc">
+  <title id="title">Borna Afraz</title>
+  <desc id="desc">Developer, builder, and explorer of AI, machine learning, and game development</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#312e81"/>
+      <stop offset="0.48" stop-color="#6d28d9"/>
+      <stop offset="1" stop-color="#4338ca"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#c4b5fd" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#c4b5fd" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="200" fill="url(#background)"/>
+  <circle cx="170" cy="15" r="190" fill="url(#glow)"/>
+  <circle cx="1020" cy="65" r="240" fill="url(#glow)"/>
+  <path d="M0 157 C170 135 315 190 505 164 C695 138 825 188 1200 151 V200 H0 Z" fill="#0d1117" fill-opacity="0.28"/>
+  <path d="M0 174 C220 145 365 211 590 174 C790 141 963 198 1200 168 V200 H0 Z" fill="#0d1117" fill-opacity="0.55"/>
+
+  <text x="600" y="82" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700" letter-spacing="1">Borna Afraz</text>
+  <text x="600" y="119" text-anchor="middle" fill="#ede9fe" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" letter-spacing="1.2">DEVELOPER  ·  BUILDER  ·  EXPLORING AI/ML &amp; GAME DEV</text>
+</svg>
