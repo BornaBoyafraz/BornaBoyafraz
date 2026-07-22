@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Borna%20Afraz&fontSize=58&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=Developer%20%7C%20Builder%20%7C%20Exploring%20AI%2FML%20%26%20Game%20Dev&descAlignY=60&descSize=18" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Borna%20Afraz&fontSize=58&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=Developer%20%7C%20Builder%20%7C%20Exploring%20AI%2FML%20%26%20Game%20Dev&descAlignY=60&descSize=18&v=2" width="100%" />
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=8B5CF6&center=true&vCenter=true&width=680&height=48&lines=Software+Developer+%26+Builder;Shipping+AI%2FML+%2B+full-stack+%2B+game+projects;Python+%7C+TypeScript+%7C+Java+%7C+C%23+%7C+C%2B%2B;Exploring+LLM+safety%2C+agents+%26+systems" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=8B5CF6&center=true&vCenter=true&width=680&height=48&lines=Software+Developer+%26+Builder;Shipping+AI%2FML+%2B+full-stack+%2B+game+projects;Python+%7C+TypeScript+%7C+Java+%7C+C%23+%7C+C%2B%2B;Exploring+LLM+safety%2C+agents+%26+systems&v=2" alt="Typing SVG" /></a>
 
 <br/>
 
@@ -200,19 +200,6 @@ Selected member of TKS — an innovation program for ambitious students working 
 
 ---
 
-## 📜 Certifications
-
-<div align="center">
-
-_Currently pursuing certifications in ML and cloud — will update as completed._
-
-![Python](https://img.shields.io/badge/Python-Proficient-6D28D9?style=for-the-badge&logo=python&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine_Learning-In_Progress-4F46E5?style=for-the-badge&logo=tensorflow&logoColor=white)
-
-</div>
-
----
-
 ## 💻 Coding Profiles
 
 <div align="center">
@@ -227,10 +214,10 @@ _Adding LeetCode / HackerRank / CodeChef links here soon._
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=BornaBoyafraz&show_icons=true&hide_border=true&count_private=false&include_all_commits=true&bg_color=0d1117&title_color=a78bfa&icon_color=8b5cf6&text_color=c9d1d9&ring_color=8b5cf6" alt="GitHub Stats" />
+<img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api?username=BornaBoyafraz&show_icons=true&hide_border=true&count_private=false&include_all_commits=true&bg_color=0d1117&title_color=a78bfa&icon_color=8b5cf6&text_color=c9d1d9&ring_color=8b5cf6" alt="GitHub Stats" />
 <img height="165" src="https://streak-stats.demolab.com?user=BornaBoyafraz&hide_border=true&background=0d1117&border=0d1117&stroke=8b5cf6&ring=a78bfa&fire=c4b5fd&currStreakLabel=a78bfa&sideLabels=c9d1d9&dates=8b949e&currStreakNum=ffffff&sideNums=ffffff" alt="GitHub Streak" />
 
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=BornaBoyafraz&layout=compact&hide_border=true&langs_count=8&bg_color=0d1117&title_color=a78bfa&text_color=c9d1d9" alt="Top Languages" />
+<img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=BornaBoyafraz&layout=compact&hide_border=true&langs_count=8&bg_color=0d1117&title_color=a78bfa&text_color=c9d1d9" alt="Top Languages" />
 
 </div>
 
@@ -240,7 +227,7 @@ _Adding LeetCode / HackerRank / CodeChef links here soon._
 
 <div align="center">
 
-![Trophies](https://github-profile-trophy.vercel.app/?username=BornaBoyafraz&theme=discord&no-frame=true&no-bg=true&margin-w=4&margin-h=4&column=7)
+![Trophies](https://github-trophies.vercel.app/?username=BornaBoyafraz&theme=discord&no-frame=true&no-bg=true&margin-w=4&margin-h=4&column=7)
 
 </div>
 
@@ -299,6 +286,6 @@ focus:
 
 > _Build things that work end-to-end — then make them better._
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&v=2" width="100%" />
 
 </div>
