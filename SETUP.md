@@ -52,10 +52,12 @@ returns a pre-push calendar while indexing a new commit.
 GitHub Actions schedules are best-effort, so a run can occasionally start
 a few minutes after its scheduled time.
 
-The SVG includes an original pixel-art commit builder. Its route is
-calculated from the newest square's weekday: it walks in, uses a ladder
-for higher rows, hammers the square, has a harmless comic tumble, rests,
-and repeats with rotating messages. The animation respects the viewer's
+The SVG includes an original, expressive 3D commit builder with a face,
+shaded construction gear, an isometric target block, a toolbox, blueprint,
+cone, ladder, sparks, and dust. Each weekday has its own accent, shift name,
+eight-line dialogue pack, and comic tumble. Forty-eight synchronized
+keyframed sequences make the worker walk in, climb for upper rows, build
+today's square, react, rest, and reset. The animation respects the viewer's
 reduced-motion preference.
 
 User-confirmed contribution counts that are not visible in GitHub's
