@@ -1,14 +1,21 @@
 name: Update profile art
 
 "on":
+  # GitHub cannot trigger this profile workflow when another repository
+  # receives a contribution, so poll the public calendar every 15 minutes.
+  # The offset avoids the busiest top-of-hour scheduling window.
   schedule:
-    - cron: "3 * * * *"
+    - cron: "3,18,33,48 * * * *"
   workflow_dispatch: {}
-  push:
+  push: # Refresh immediately when this profile repository changes.
     branches: [main]
 
 permissions:
   contents: write
+
+concurrency:
+  group: update-profile-art
+  cancel-in-progress: false
 
 jobs:
   heatmap:
@@ -23,6 +30,7 @@ jobs:
       - run: python scripts/render_heatmap_svg.py
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
+          # The refreshed timestamp makes each successful run produce one commit.
           commit_message: "chore: refresh contribution graph [skip ci]"
           commit_user_name: "Borna Afraz"
           commit_user_email: "bornaboyafraz@gmail.com"

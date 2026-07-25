@@ -36,9 +36,15 @@ you print (the background becomes spaces). `source-photo.*` and
 ## 3. Keep the heatmap fresh
 
 `.github/workflows/update-profile-art.yml` re-scrapes your public
-contribution calendar daily (~06:17 UTC) and commits a fresh
-`contrib-heatmap.svg`. No token needed — it reads the public HTML at
-`github.com/users/BornaBoyafraz/contributions`.
+contribution calendar every 15 minutes and commits the refreshed
+`data/contributions.json` and `contrib-heatmap.svg` to `main`. The refresh
+timestamp ensures each successful run creates one commit, authored with
+the profile owner's configured GitHub email so it can count toward the
+contribution calendar. No API token is needed — the data comes from the
+public HTML at `github.com/users/BornaBoyafraz/contributions`.
+
+GitHub Actions schedules are best-effort, so a run can occasionally start
+a few minutes after its scheduled time.
 
 After the first push, open the repo's **Actions** tab and run
 **Update profile art** once by hand (workflow_dispatch) to confirm it
