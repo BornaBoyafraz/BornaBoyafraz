@@ -74,6 +74,9 @@
   #builder-route {
     animation:builder-route 30s 1.35s ease-in-out infinite both;
   }
+  #builder-scale {
+    animation:builder-visibility 30s 1.35s ease-in-out infinite both;
+  }
   #builder-pose {
     transform-box:fill-box;
     transform-origin:center bottom;
@@ -92,12 +95,12 @@
   #builder-mouth {
     transform-box:fill-box;
     transform-origin:center;
-    animation:mouth-talk .72s ease-in-out infinite alternate;
+    animation:mouth-talk 30s 1.35s ease-in-out infinite both;
   }
   .builder-eye {
     transform-box:fill-box;
     transform-origin:center;
-    animation:eye-blink 4.2s infinite;
+    animation:eye-blink 30s 1.35s infinite both;
   }
   .builder-pupil { animation:pupil-look 6s ease-in-out infinite; }
   .builder-brow.a { animation:brow-a 5.4s ease-in-out infinite; }
@@ -120,12 +123,12 @@
   .builder-leg.a {
     transform-box:fill-box;
     transform-origin:center top;
-    animation:leg-left .38s ease-in-out infinite alternate;
+    animation:leg-left 30s 1.35s linear infinite both;
   }
   .builder-leg.b {
     transform-box:fill-box;
     transform-origin:center top;
-    animation:leg-right .38s ease-in-out infinite alternate;
+    animation:leg-right 30s 1.35s linear infinite both;
   }
   #builder-hat {
     transform-box:fill-box;
@@ -184,6 +187,27 @@
   }
   #builder-zzz { animation:zzz-float 30s 1.35s infinite both; }
   #builder-alert { animation:alert-pop 30s 1.35s infinite both; }
+  #bed-blanket {
+    transform-box:fill-box;
+    transform-origin:center bottom;
+    animation:bed-blanket 30s 1.35s ease-in-out infinite both;
+  }
+  #bed-pillow {
+    transform-box:fill-box;
+    transform-origin:center;
+    animation:bed-pillow 30s 1.35s ease-in-out infinite both;
+  }
+  #bed-lamp-glow { animation:bed-lamp 30s 1.35s ease-in-out infinite both; }
+  #sleeping-builder {
+    transform-box:fill-box;
+    transform-origin:center bottom;
+    animation:sleeping-builder 30s 1.35s ease-in-out infinite both;
+  }
+  #sleeping-body {
+    transform-box:fill-box;
+    transform-origin:left bottom;
+    animation:sleeping-breath 2.4s ease-in-out infinite;
+  }
   #shift-board {
     transform-box:fill-box;
     transform-origin:center bottom;
@@ -193,20 +217,26 @@
   .msg-0{animation:builder-msg-0 30s 1.35s infinite both}.msg-1{animation:builder-msg-1 30s 1.35s infinite both}.msg-2{animation:builder-msg-2 30s 1.35s infinite both}.msg-3{animation:builder-msg-3 30s 1.35s infinite both}.msg-4{animation:builder-msg-4 30s 1.35s infinite both}.msg-5{animation:builder-msg-5 30s 1.35s infinite both}.msg-6{animation:builder-msg-6 30s 1.35s infinite both}.msg-7{animation:builder-msg-7 30s 1.35s infinite both}@keyframes builder-msg-0{0%,0.00%{opacity:0;transform:translateY(4px) scale(.96)}1.20%,10.50%{opacity:1;transform:translateY(0) scale(1)}11.90%,100%{opacity:0;transform:translateY(-2px) scale(.98)}}@keyframes builder-msg-1{0%,12.50%{opacity:0;transform:translateY(4px) scale(.96)}13.70%,23.00%{opacity:1;transform:translateY(0) scale(1)}24.40%,100%{opacity:0;transform:translateY(-2px) scale(.98)}}@keyframes builder-msg-2{0%,25.00%{opacity:0;transform:translateY(4px) scale(.96)}26.20%,35.50%{opacity:1;transform:translateY(0) scale(1)}36.90%,100%{opacity:0;transform:translateY(-2px) scale(.98)}}@keyframes builder-msg-3{0%,37.50%{opacity:0;transform:translateY(4px) scale(.96)}38.70%,48.00%{opacity:1;transform:translateY(0) scale(1)}49.40%,100%{opacity:0;transform:translateY(-2px) scale(.98)}}@keyframes builder-msg-4{0%,50.00%{opacity:0;transform:translateY(4px) scale(.96)}51.20%,60.50%{opacity:1;transform:translateY(0) scale(1)}61.90%,100%{opacity:0;transform:translateY(-2px) scale(.98)}}@keyframes builder-msg-5{0%,62.50%{opacity:0;transform:translateY(4px) scale(.96)}63.70%,73.00%{opacity:1;transform:translateY(0) scale(1)}74.40%,100%{opacity:0;transform:translateY(-2px) scale(.98)}}@keyframes builder-msg-6{0%,75.00%{opacity:0;transform:translateY(4px) scale(.96)}76.20%,85.50%{opacity:1;transform:translateY(0) scale(1)}86.90%,100%{opacity:0;transform:translateY(-2px) scale(.98)}}@keyframes builder-msg-7{0%,87.50%{opacity:0;transform:translateY(4px) scale(.96)}88.70%,98.00%{opacity:1;transform:translateY(0) scale(1)}99.40%,100%{opacity:0;transform:translateY(-2px) scale(.98)}}
 
   @keyframes builder-route {
-    0%,5% { transform:translate(661px,104px); }
-    12%,18% { transform:translate(739px,104px); }
-    27%,58% { transform:translate(739px,106px); }
-    63% { transform:translate(743px,108px); }
-    69%,89% { transform:translate(744px,109px); }
-    94% { transform:translate(739px,104px); }
-    100% { transform:translate(661px,104px); }
+    0%,3% { transform:translate(619px,109px); }
+    17%,22% { transform:translate(744px,109px); }
+    29%,59% { transform:translate(744px,110px); }
+    64% { transform:translate(748px,112px); }
+    70% { transform:translate(749px,109px); }
+    77%,100% { transform:translate(619px,109px); }
+  }
+  @keyframes builder-visibility {
+    0%,77%,94%,100% { opacity:1; }
+    81%,91% { opacity:0; }
   }
   @keyframes builder-pose {
-    0%,59%,94%,100% { transform:rotate(0deg) scale(1); }
-    62% { transform:rotate(14deg) scale(1.03,.97); }
+    0%,60% { transform:rotate(0deg) scale(1); }
+    63% { transform:rotate(14deg) scale(1.03,.97); }
     67% { transform:rotate(76deg) scale(.94); }
-    70%,88% { transform:rotate(0deg) scale(1.06,.72); }
-    91% { transform:rotate(-7deg) scale(.98,1.08); }
+    71%,76% { transform:rotate(0deg) scale(1); }
+    80%,91% { transform:rotate(0deg) scale(1.06,.72); }
+    94% { transform:rotate(0deg) scale(.96,1.04); }
+    97% { transform:rotate(-5deg) scale(.98,1.08); }
+    100% { transform:rotate(0deg) scale(1); }
   }
   @keyframes torso-breathe {
     0%,100% { transform:scale(1); }
@@ -218,12 +248,20 @@
     65%,78% { transform:translateX(-.5px) rotate(-2deg); }
   }
   @keyframes mouth-talk {
-    from { transform:scaleX(.8) scaleY(.65); }
-    to { transform:scaleX(1.12) scaleY(1.35); }
+    0%,10%,22%,29%,60%,72%,77%,94%,100% {
+      transform:scaleX(1) scaleY(.75);
+    }
+    6%,18%,34%,40%,46%,52%,58% {
+      transform:scaleX(1.12) scaleY(1.35);
+    }
+    80%,91% { transform:scaleX(.75) scaleY(.2); }
+    97% { transform:scaleX(1.18) scaleY(1.5); }
   }
   @keyframes eye-blink {
-    0%,45%,51%,100% { transform:scaleY(1); }
-    48% { transform:scaleY(.08); }
+    0%,6%,8%,17%,19%,31%,33%,44%,46%,58%,60%,73%,75%,77%,94%,100% {
+      transform:scaleY(1);
+    }
+    7%,18%,32%,45%,59%,74%,80%,91% { transform:scaleY(.08); }
   }
   @keyframes pupil-look {
     0%,18%,100% { transform:translateX(0); }
@@ -239,29 +277,34 @@
     68%,78% { transform:translateY(-1px) rotate(8deg); }
   }
   @keyframes arm-left {
-    0%,20%,58%,100% { transform:rotate(0); }
-    24%,31% { transform:rotate(-32deg); }
-    34%,42% { transform:rotate(18deg); }
-    72%,88% { transform:rotate(-20deg); }
+    0%,28%,60%,69%,77%,94%,100% { transform:rotate(0); }
+    32%,38%,44%,50%,56% { transform:rotate(-28deg); }
+    35%,41%,47%,53%,59% { transform:rotate(16deg); }
+    80%,91% { transform:rotate(-12deg); }
+    97% { transform:rotate(-26deg); }
   }
   @keyframes arm-right {
-    0%,23%,60%,100% { transform:rotate(0); }
-    28%,56% { transform:rotate(-10deg); }
+    0%,28%,60%,69%,77%,94%,100% { transform:rotate(0); }
+    32%,59% { transform:rotate(-10deg); }
     66% { transform:rotate(24deg); }
-    72%,88% { transform:rotate(-18deg); }
+    80%,91% { transform:rotate(-10deg); }
+    97% { transform:rotate(20deg); }
   }
   @keyframes builder-hammer {
-    0%,28%,59%,100% { transform:rotate(-55deg); }
-    31%,38%,45%,52% { transform:rotate(18deg); }
-    34%,41%,48%,55% { transform:rotate(-68deg); }
+    0%,28%,59%,77%,94%,100% { transform:rotate(-55deg); opacity:1; }
+    31%,38%,45%,52% { transform:rotate(18deg); opacity:1; }
+    34%,41%,48%,55% { transform:rotate(-68deg); opacity:1; }
+    80%,91% { transform:rotate(-55deg); opacity:0; }
   }
   @keyframes leg-left {
-    from { transform:rotate(-22deg); }
-    to { transform:rotate(22deg); }
+    0%,3%,17%,22%,29%,69%,77%,100% { transform:rotate(0); }
+    5%,9%,13%,19%,24%,71%,75% { transform:rotate(-22deg); }
+    7%,11%,15%,21%,27%,73% { transform:rotate(22deg); }
   }
   @keyframes leg-right {
-    from { transform:rotate(22deg); }
-    to { transform:rotate(-22deg); }
+    0%,3%,17%,22%,29%,69%,77%,100% { transform:rotate(0); }
+    5%,9%,13%,19%,24%,71%,75% { transform:rotate(22deg); }
+    7%,11%,15%,21%,27%,73% { transform:rotate(-22deg); }
   }
   @keyframes hat-bob {
     0%,100% { transform:translateY(0) rotate(0); }
@@ -369,26 +412,48 @@
     66%,84% { transform:scaleX(1) rotate(-3deg); opacity:1; }
   }
   @keyframes zzz-float {
-    0%,70%,91%,100% { opacity:0; transform:translate(0,3px) scale(.8); }
-    76% { opacity:1; transform:translate(0,0) scale(1); }
-    88% { opacity:0; transform:translate(6px,-9px) scale(1.2); }
+    0%,78%,92%,100% { opacity:0; transform:translate(0,3px) scale(.8); }
+    82% { opacity:1; transform:translate(0,0) scale(1); }
+    90% { opacity:0; transform:translate(6px,-9px) scale(1.2); }
   }
   @keyframes alert-pop {
-    0%,59%,72%,100% { opacity:0; transform:scale(.4) rotate(-15deg); }
-    63%,68% { opacity:1; transform:scale(1.1) rotate(5deg); }
+    0%,92%,98%,100% { opacity:0; transform:scale(.4) rotate(-15deg); }
+    94%,96% { opacity:1; transform:scale(1.1) rotate(5deg); }
+  }
+  @keyframes bed-blanket {
+    0%,77%,94%,100% { transform:translateY(2px) scaleY(.88); opacity:.72; }
+    81%,91% { transform:translateY(-1px) scaleY(1.05); opacity:1; }
+    84%,88% { transform:translateY(-2px) scaleY(1.1); opacity:1; }
+  }
+  @keyframes bed-pillow {
+    0%,77%,94%,100% { transform:scale(1); }
+    81%,91% { transform:scale(.92,1.08); }
+  }
+  @keyframes bed-lamp {
+    0%,77%,94%,100% { opacity:.08; }
+    81%,91% { opacity:.78; }
+  }
+  @keyframes sleeping-builder {
+    0%,78%,94%,100% { opacity:0; transform:translateY(2px); }
+    81%,91% { opacity:1; transform:translateY(0); }
+  }
+  @keyframes sleeping-breath {
+    0%,100% { transform:scaleY(.96); }
+    50% { transform:scaleY(1.05); }
   }
   @keyframes shift-board {
     0%,100% { transform:rotate(-1deg); }
     50% { transform:rotate(1deg); }
   }
   @media (prefers-reduced-motion:reduce) {
-    #builder-route,#builder-pose,#builder-torso,#builder-head,#builder-mouth,
+    #builder-route,#builder-scale,#builder-pose,#builder-torso,#builder-head,#builder-mouth,
     .builder-eye,.builder-pupil,.builder-brow,#builder-arm-left,
     #builder-arm-right,#builder-hammer,.builder-leg,#builder-hat,#hat-glint,
     #builder-shadow,.builder-ladder,#target-block,#target-top,#target-front,
     #target-side,.target-shine,.target-glow,.builder-dust,.builder-spark,
     #sweat-drop,.dizzy-star,#builder-toolbox,#toolbox-lid,#builder-cone,
-    #builder-blueprint,#builder-zzz,#builder-alert,#shift-board,.builder-msg {
+    #builder-blueprint,#builder-zzz,#builder-alert,#bed-blanket,#bed-pillow,
+    #bed-lamp-glow,#sleeping-builder,#sleeping-body,#shift-board,.builder-msg {
       animation:none !important;
     }
     .builder-msg { display:none; }
@@ -789,6 +854,16 @@
 <polygon id="target-side" points="787,128 791,124 791,135 787,139" fill="#087f3e"/>
 <path class="target-shine" d="M778 130v7" stroke="#b7ffd1" stroke-width="1.4" stroke-linecap="round"/>
 </g>
+<g id="builder-bed" filter="url(#builder-drop)">
+<ellipse cx="646" cy="145" rx="29" ry="3" fill="#010409" opacity=".55"/>
+<circle id="bed-lamp-glow" cx="614" cy="132" r="8" fill="#ff8a3d" opacity=".08"/>
+<path d="M614 142V133h7" fill="none" stroke="#8b949e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M611 133h8l-2-4h-4z" fill="#ff8a3d" stroke="#30363d" stroke-width=".7"/>
+<rect x="619" y="133" width="54" height="10" rx="4" fill="#dbeafe" stroke="#6e7681" stroke-width=".8"/>
+<polygon points="619,141 673,141 669,146 621,146" fill="#30363d" stroke="#6e7681" stroke-width=".8"/>
+<rect id="bed-pillow" x="657" y="134" width="14" height="7" rx="3" fill="#ffffff" stroke="#93c5fd" stroke-width=".6"/>
+<path d="M622 146v4M668 146v4" stroke="#8b949e" stroke-width="2"/>
+</g>
 <g transform="translate(684 128)">
 <g id="builder-cone">
 <path d="M2 9L6 0l4 9z" fill="url(#cone-orange)" stroke="#7c2d12" stroke-width=".7"/>
@@ -817,9 +892,10 @@
 <path class="builder-spark a" opacity="0" d="M777 130l3-3M777 127l3 3" stroke="#ff8a3d" stroke-width="1.2"/>
 <path class="builder-spark b" opacity="0" d="M783 131l3-3M783 128l3 3" stroke="#f7c948" stroke-width="1.2"/>
 <circle class="builder-spark c" opacity="0" cx="781" cy="128" r="1.5" fill="#ffffff"/>
-<g id="builder-route" transform="translate(739 106)">
-<g id="builder-pose" filter="url(#builder-drop)">
+<g id="builder-route" transform="translate(744 110)">
+<g id="builder-scale" transform="scale(.86)">
 <ellipse id="builder-shadow" cx="15" cy="35" rx="15" ry="3" fill="#010409" opacity=".55"/>
+<g id="builder-pose" filter="url(#builder-drop)">
 <g class="builder-leg a">
 <path d="M8 26h7v7H8z" fill="url(#overalls-3d)"/>
 <path d="M7 32h9v3H7z" fill="url(#boot-3d)"/>
@@ -881,12 +957,27 @@
 <text class="dizzy-star a" opacity="0" x="2" y="4" fill="#f7c948" font-size="6">★</text>
 <text class="dizzy-star b" opacity="0" x="27" y="2" fill="#ffffff" font-size="5">✦</text>
 </g>
-<text id="builder-zzz" opacity="0" x="25" y="1" fill="#a78bfa" font-size="7" font-weight="800">Zz</text>
+</g>
+<text id="builder-zzz" opacity="0" x="36" y="20" fill="#a78bfa" font-size="7" font-weight="800">Zz</text>
 <g id="builder-alert" opacity="0">
 <circle cx="31" cy="2" r="5" fill="#f7c948" stroke="#7c4a03"/>
 <text x="31" y="4" text-anchor="middle" fill="#0d1117" font-size="7" font-weight="900">!</text>
 </g>
 </g>
+<g id="sleeping-builder" opacity="0" filter="url(#builder-drop)">
+<g id="sleeping-body">
+<path d="M632 136q13-5 29 2v7H632z" fill="url(#shirt-3d)"/>
+<path d="M637 137h19v8H637z" fill="url(#overalls-3d)"/>
+<circle cx="655" cy="136" r="2.4" fill="#f2b38f"/>
+</g>
+<circle cx="664" cy="138" r="6.5" fill="url(#skin-3d)" stroke="#9a5a3a" stroke-width=".65"/>
+<path d="M659 136q2-3 5-3" fill="none" stroke="#5b2c17" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M660 138q1.4 1 2.8 0M665 138q1.4 1 2.8 0" fill="none" stroke="#5b2c17" stroke-width=".8" stroke-linecap="round"/>
+<path d="M662 141q2 1.5 4 0" fill="none" stroke="#7c2d12" stroke-width=".8" stroke-linecap="round"/>
+<path d="M618 147q1-6 7-6t7 6z" fill="url(#hat-3d)" stroke="#9a6700" stroke-width=".6"/>
+<rect x="616" y="146" width="18" height="2.5" rx="1.2" fill="url(#hat-brim)"/>
+</g>
+<path id="bed-blanket" d="M622 135h35v9H622q3-4 0-9z" fill="#ff8a3d" stroke="#0d1117" stroke-width=".7" opacity=".72"/>
 <g id="shift-board">
 <rect x="569" y="83" width="116" height="10" rx="4" fill="#ff8a3d" opacity=".95"/>
 <text x="627" y="90" text-anchor="middle" fill="#0d1117" font-size="6.2" font-weight="900" letter-spacing=".45">SATURDAY SIDE QUEST</text>
@@ -925,19 +1016,19 @@
 <rect x="562" y="94" width="176" height="27" rx="6" fill="url(#bubble-bg)" stroke="#ff8a3d" stroke-width="1.3"/>
 <path d="M718 121h11l-4 7z" fill="#161b22" stroke="#ff8a3d" stroke-width="1"/>
 <path d="M569 98h162" stroke="#ffffff" stroke-opacity=".08" stroke-linecap="round"/>
-<text x="650.0" y="111" text-anchor="middle" fill="#f0f6fc" font-size="7.8" font-weight="700">I meant to sit down.</text>
+<text x="650.0" y="111" text-anchor="middle" fill="#f0f6fc" font-size="7.8" font-weight="700">Tiny bed break unlocked.</text>
 </g>
 <g class="builder-msg msg-6" opacity="0">
 <rect x="562" y="94" width="176" height="27" rx="6" fill="url(#bubble-bg)" stroke="#ff8a3d" stroke-width="1.3"/>
 <path d="M718 121h11l-4 7z" fill="#161b22" stroke="#ff8a3d" stroke-width="1"/>
 <path d="M569 98h162" stroke="#ffffff" stroke-opacity=".08" stroke-linecap="round"/>
-<text x="650.0" y="111" text-anchor="middle" fill="#f0f6fc" font-size="7.8" font-weight="700">Snack acquired. Morale restored.</text>
+<text x="650.0" y="111" text-anchor="middle" fill="#f0f6fc" font-size="7.8" font-weight="700">Zzz… side quest paused.</text>
 </g>
 <g class="builder-msg msg-7" opacity="0">
 <rect x="562" y="94" width="176" height="27" rx="6" fill="url(#bubble-bg)" stroke="#ff8a3d" stroke-width="1.3"/>
 <path d="M718 121h11l-4 7z" fill="#161b22" stroke="#ff8a3d" stroke-width="1"/>
 <path d="M569 98h162" stroke="#ffffff" stroke-opacity=".08" stroke-linecap="round"/>
-<text x="650.0" y="111" text-anchor="middle" fill="#f0f6fc" font-size="7.8" font-weight="700">Green block complete. GG.</text>
+<text x="650.0" y="111" text-anchor="middle" fill="#f0f6fc" font-size="7.8" font-weight="700">Respawned! Back to work.</text>
 </g>
 <text x="48" y="165" fill="#8b949e">Less</text>
 <rect x="82" y="155" width="11" height="11" rx="2.5" fill="#161b22"/>

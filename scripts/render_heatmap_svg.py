@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Render contrib-heatmap.svg from data/contributions.json: the classic
 53-week calendar plus an expressive 3D commit builder with weekday-specific
-dialogue and 48 synchronized construction-site animations per daily scene.
+dialogue and 54 synchronized construction-site animations per daily scene.
 
 Usage:  python scripts/render_heatmap_svg.py
         STATIC=1 python scripts/render_heatmap_svg.py   # frozen frame
@@ -45,9 +45,9 @@ WEEKDAY_STORIES = {
             "Raising today’s green block!",
             "Steady ladder, steady hands.",
             "Bonk! That was the bug.",
-            "Quick coffee inspection…",
-            "Face says tired. Git says go.",
-            "Foundation locked. Nice.",
+            "Bed break. Two minutes…",
+            "Zzz… compiling green dreams.",
+            "Alarm! Back to the build.",
         ],
     },
     1: {
@@ -59,9 +59,9 @@ WEEKDAY_STORIES = {
             "Three dimensions, zero fear.",
             "Hammer says: ship it.",
             "Gravity filed a bug report.",
-            "Ten-second snack deployment.",
-            "Okay, back to the scaffold.",
-            "Tuesday block: production-ready.",
+            "Bed break deployed.",
+            "Zzz… tools are charging.",
+            "Nap merged. Back to work!",
         ],
     },
     2: {
@@ -73,9 +73,9 @@ WEEKDAY_STORIES = {
             "This block needs extra polish.",
             "Tap, test, tap, deploy.",
             "Whoa—Wednesday wobble!",
-            "I’m debugging gravity.",
-            "Tiny break. Huge ambition.",
-            "Wednesday square: solid.",
+            "Bed checkpoint reached.",
+            "Zzz… milestone dreams.",
+            "Energy restored. Let’s build!",
         ],
     },
     3: {
@@ -88,8 +88,8 @@ WEEKDAY_STORIES = {
             "One clean strike coming up.",
             "The ladder moved. Rude.",
             "Hard hat saved the streak!",
-            "Recharging builder energy…",
-            "Thursday block: certified.",
+            "Zzz… builder recharging.",
+            "Alarm says: lift again!",
         ],
     },
     4: {
@@ -101,9 +101,9 @@ WEEKDAY_STORIES = {
             "Green block looking glossy.",
             "Commit incoming—stand clear!",
             "Plot twist: comic tumble.",
-            "I call that agile resting.",
-            "One snack, then we ship.",
-            "Friday square: launched!",
+            "Bed branch checked out.",
+            "Zzz… dreaming of launch.",
+            "Wake, stretch, ship again!",
         ],
     },
     5: {
@@ -115,9 +115,9 @@ WEEKDAY_STORIES = {
             "This square needs more depth.",
             "Hammer combo x3!",
             "Whoa—physics update!",
-            "I meant to sit down.",
-            "Snack acquired. Morale restored.",
-            "Green block complete. GG.",
+            "Tiny bed break unlocked.",
+            "Zzz… side quest paused.",
+            "Respawned! Back to work.",
         ],
     },
     6: {
@@ -129,9 +129,9 @@ WEEKDAY_STORIES = {
             "Checking every tiny bolt.",
             "Soft tap. Strong square.",
             "Oops—scaffold yoga!",
-            "Hydration checkpoint…",
-            "Planning Monday’s comeback.",
-            "Site secure. Rest well.",
+            "Sunday bed checkpoint.",
+            "Zzz… planning the comeback.",
+            "Reset complete. Build again!",
         ],
     },
 }
@@ -176,6 +176,9 @@ def builder_css(
   #builder-route {{
     animation:builder-route 30s 1.35s ease-in-out infinite both;
   }}
+  #builder-scale {{
+    animation:builder-visibility 30s 1.35s ease-in-out infinite both;
+  }}
   #builder-pose {{
     transform-box:fill-box;
     transform-origin:center bottom;
@@ -194,12 +197,12 @@ def builder_css(
   #builder-mouth {{
     transform-box:fill-box;
     transform-origin:center;
-    animation:mouth-talk .72s ease-in-out infinite alternate;
+    animation:mouth-talk 30s 1.35s ease-in-out infinite both;
   }}
   .builder-eye {{
     transform-box:fill-box;
     transform-origin:center;
-    animation:eye-blink 4.2s infinite;
+    animation:eye-blink 30s 1.35s infinite both;
   }}
   .builder-pupil {{ animation:pupil-look 6s ease-in-out infinite; }}
   .builder-brow.a {{ animation:brow-a 5.4s ease-in-out infinite; }}
@@ -222,12 +225,12 @@ def builder_css(
   .builder-leg.a {{
     transform-box:fill-box;
     transform-origin:center top;
-    animation:leg-left .38s ease-in-out infinite alternate;
+    animation:leg-left 30s 1.35s linear infinite both;
   }}
   .builder-leg.b {{
     transform-box:fill-box;
     transform-origin:center top;
-    animation:leg-right .38s ease-in-out infinite alternate;
+    animation:leg-right 30s 1.35s linear infinite both;
   }}
   #builder-hat {{
     transform-box:fill-box;
@@ -286,6 +289,27 @@ def builder_css(
   }}
   #builder-zzz {{ animation:zzz-float 30s 1.35s infinite both; }}
   #builder-alert {{ animation:alert-pop 30s 1.35s infinite both; }}
+  #bed-blanket {{
+    transform-box:fill-box;
+    transform-origin:center bottom;
+    animation:bed-blanket 30s 1.35s ease-in-out infinite both;
+  }}
+  #bed-pillow {{
+    transform-box:fill-box;
+    transform-origin:center;
+    animation:bed-pillow 30s 1.35s ease-in-out infinite both;
+  }}
+  #bed-lamp-glow {{ animation:bed-lamp 30s 1.35s ease-in-out infinite both; }}
+  #sleeping-builder {{
+    transform-box:fill-box;
+    transform-origin:center bottom;
+    animation:sleeping-builder 30s 1.35s ease-in-out infinite both;
+  }}
+  #sleeping-body {{
+    transform-box:fill-box;
+    transform-origin:left bottom;
+    animation:sleeping-breath 2.4s ease-in-out infinite;
+  }}
   #shift-board {{
     transform-box:fill-box;
     transform-origin:center bottom;
@@ -295,20 +319,26 @@ def builder_css(
   {message_css}
 
   @keyframes builder-route {{
-    0%,5% {{ transform:translate({start_x}px,{ground_y}px); }}
-    12%,18% {{ transform:translate({ground_x}px,{ground_y}px); }}
-    27%,58% {{ transform:translate({target_x}px,{target_y}px); }}
-    63% {{ transform:translate({target_x + 4}px,{target_y + 2}px); }}
-    69%,89% {{ transform:translate({ground_x + 5}px,{ground_y + 5}px); }}
-    94% {{ transform:translate({ground_x}px,{ground_y}px); }}
-    100% {{ transform:translate({start_x}px,{ground_y}px); }}
+    0%,3% {{ transform:translate({start_x}px,{ground_y}px); }}
+    17%,22% {{ transform:translate({ground_x}px,{ground_y}px); }}
+    29%,59% {{ transform:translate({target_x}px,{target_y}px); }}
+    64% {{ transform:translate({target_x + 4}px,{target_y + 2}px); }}
+    70% {{ transform:translate({ground_x + 5}px,{ground_y}px); }}
+    77%,100% {{ transform:translate({start_x}px,{ground_y}px); }}
+  }}
+  @keyframes builder-visibility {{
+    0%,77%,94%,100% {{ opacity:1; }}
+    81%,91% {{ opacity:0; }}
   }}
   @keyframes builder-pose {{
-    0%,59%,94%,100% {{ transform:rotate(0deg) scale(1); }}
-    62% {{ transform:rotate(14deg) scale(1.03,.97); }}
+    0%,60% {{ transform:rotate(0deg) scale(1); }}
+    63% {{ transform:rotate(14deg) scale(1.03,.97); }}
     67% {{ transform:rotate({fall_angle}deg) scale(.94); }}
-    70%,88% {{ transform:rotate(0deg) scale(1.06,.72); }}
-    91% {{ transform:rotate(-7deg) scale(.98,1.08); }}
+    71%,76% {{ transform:rotate(0deg) scale(1); }}
+    80%,91% {{ transform:rotate(0deg) scale(1.06,.72); }}
+    94% {{ transform:rotate(0deg) scale(.96,1.04); }}
+    97% {{ transform:rotate(-5deg) scale(.98,1.08); }}
+    100% {{ transform:rotate(0deg) scale(1); }}
   }}
   @keyframes torso-breathe {{
     0%,100% {{ transform:scale(1); }}
@@ -320,12 +350,20 @@ def builder_css(
     65%,78% {{ transform:translateX(-.5px) rotate(-2deg); }}
   }}
   @keyframes mouth-talk {{
-    from {{ transform:scaleX(.8) scaleY(.65); }}
-    to {{ transform:scaleX(1.12) scaleY(1.35); }}
+    0%,10%,22%,29%,60%,72%,77%,94%,100% {{
+      transform:scaleX(1) scaleY(.75);
+    }}
+    6%,18%,34%,40%,46%,52%,58% {{
+      transform:scaleX(1.12) scaleY(1.35);
+    }}
+    80%,91% {{ transform:scaleX(.75) scaleY(.2); }}
+    97% {{ transform:scaleX(1.18) scaleY(1.5); }}
   }}
   @keyframes eye-blink {{
-    0%,45%,51%,100% {{ transform:scaleY(1); }}
-    48% {{ transform:scaleY(.08); }}
+    0%,6%,8%,17%,19%,31%,33%,44%,46%,58%,60%,73%,75%,77%,94%,100% {{
+      transform:scaleY(1);
+    }}
+    7%,18%,32%,45%,59%,74%,80%,91% {{ transform:scaleY(.08); }}
   }}
   @keyframes pupil-look {{
     0%,18%,100% {{ transform:translateX(0); }}
@@ -341,29 +379,34 @@ def builder_css(
     68%,78% {{ transform:translateY(-1px) rotate(8deg); }}
   }}
   @keyframes arm-left {{
-    0%,20%,58%,100% {{ transform:rotate(0); }}
-    24%,31% {{ transform:rotate(-32deg); }}
-    34%,42% {{ transform:rotate(18deg); }}
-    72%,88% {{ transform:rotate(-20deg); }}
+    0%,28%,60%,69%,77%,94%,100% {{ transform:rotate(0); }}
+    32%,38%,44%,50%,56% {{ transform:rotate(-28deg); }}
+    35%,41%,47%,53%,59% {{ transform:rotate(16deg); }}
+    80%,91% {{ transform:rotate(-12deg); }}
+    97% {{ transform:rotate(-26deg); }}
   }}
   @keyframes arm-right {{
-    0%,23%,60%,100% {{ transform:rotate(0); }}
-    28%,56% {{ transform:rotate(-10deg); }}
+    0%,28%,60%,69%,77%,94%,100% {{ transform:rotate(0); }}
+    32%,59% {{ transform:rotate(-10deg); }}
     66% {{ transform:rotate(24deg); }}
-    72%,88% {{ transform:rotate(-18deg); }}
+    80%,91% {{ transform:rotate(-10deg); }}
+    97% {{ transform:rotate(20deg); }}
   }}
   @keyframes builder-hammer {{
-    0%,28%,59%,100% {{ transform:rotate(-55deg); }}
-    31%,38%,45%,52% {{ transform:rotate(18deg); }}
-    34%,41%,48%,55% {{ transform:rotate(-68deg); }}
+    0%,28%,59%,77%,94%,100% {{ transform:rotate(-55deg); opacity:1; }}
+    31%,38%,45%,52% {{ transform:rotate(18deg); opacity:1; }}
+    34%,41%,48%,55% {{ transform:rotate(-68deg); opacity:1; }}
+    80%,91% {{ transform:rotate(-55deg); opacity:0; }}
   }}
   @keyframes leg-left {{
-    from {{ transform:rotate(-22deg); }}
-    to {{ transform:rotate(22deg); }}
+    0%,3%,17%,22%,29%,69%,77%,100% {{ transform:rotate(0); }}
+    5%,9%,13%,19%,24%,71%,75% {{ transform:rotate(-22deg); }}
+    7%,11%,15%,21%,27%,73% {{ transform:rotate(22deg); }}
   }}
   @keyframes leg-right {{
-    from {{ transform:rotate(22deg); }}
-    to {{ transform:rotate(-22deg); }}
+    0%,3%,17%,22%,29%,69%,77%,100% {{ transform:rotate(0); }}
+    5%,9%,13%,19%,24%,71%,75% {{ transform:rotate(22deg); }}
+    7%,11%,15%,21%,27%,73% {{ transform:rotate(-22deg); }}
   }}
   @keyframes hat-bob {{
     0%,100% {{ transform:translateY(0) rotate(0); }}
@@ -471,26 +514,48 @@ def builder_css(
     66%,84% {{ transform:scaleX(1) rotate(-3deg); opacity:1; }}
   }}
   @keyframes zzz-float {{
-    0%,70%,91%,100% {{ opacity:0; transform:translate(0,3px) scale(.8); }}
-    76% {{ opacity:1; transform:translate(0,0) scale(1); }}
-    88% {{ opacity:0; transform:translate(6px,-9px) scale(1.2); }}
+    0%,78%,92%,100% {{ opacity:0; transform:translate(0,3px) scale(.8); }}
+    82% {{ opacity:1; transform:translate(0,0) scale(1); }}
+    90% {{ opacity:0; transform:translate(6px,-9px) scale(1.2); }}
   }}
   @keyframes alert-pop {{
-    0%,59%,72%,100% {{ opacity:0; transform:scale(.4) rotate(-15deg); }}
-    63%,68% {{ opacity:1; transform:scale(1.1) rotate(5deg); }}
+    0%,92%,98%,100% {{ opacity:0; transform:scale(.4) rotate(-15deg); }}
+    94%,96% {{ opacity:1; transform:scale(1.1) rotate(5deg); }}
+  }}
+  @keyframes bed-blanket {{
+    0%,77%,94%,100% {{ transform:translateY(2px) scaleY(.88); opacity:.72; }}
+    81%,91% {{ transform:translateY(-1px) scaleY(1.05); opacity:1; }}
+    84%,88% {{ transform:translateY(-2px) scaleY(1.1); opacity:1; }}
+  }}
+  @keyframes bed-pillow {{
+    0%,77%,94%,100% {{ transform:scale(1); }}
+    81%,91% {{ transform:scale(.92,1.08); }}
+  }}
+  @keyframes bed-lamp {{
+    0%,77%,94%,100% {{ opacity:.08; }}
+    81%,91% {{ opacity:.78; }}
+  }}
+  @keyframes sleeping-builder {{
+    0%,78%,94%,100% {{ opacity:0; transform:translateY(2px); }}
+    81%,91% {{ opacity:1; transform:translateY(0); }}
+  }}
+  @keyframes sleeping-breath {{
+    0%,100% {{ transform:scaleY(.96); }}
+    50% {{ transform:scaleY(1.05); }}
   }}
   @keyframes shift-board {{
     0%,100% {{ transform:rotate(-1deg); }}
     50% {{ transform:rotate(1deg); }}
   }}
   @media (prefers-reduced-motion:reduce) {{
-    #builder-route,#builder-pose,#builder-torso,#builder-head,#builder-mouth,
+    #builder-route,#builder-scale,#builder-pose,#builder-torso,#builder-head,#builder-mouth,
     .builder-eye,.builder-pupil,.builder-brow,#builder-arm-left,
     #builder-arm-right,#builder-hammer,.builder-leg,#builder-hat,#hat-glint,
     #builder-shadow,.builder-ladder,#target-block,#target-top,#target-front,
     #target-side,.target-shine,.target-glow,.builder-dust,.builder-spark,
     #sweat-drop,.dizzy-star,#builder-toolbox,#toolbox-lid,#builder-cone,
-    #builder-blueprint,#builder-zzz,#builder-alert,#shift-board,.builder-msg {{
+    #builder-blueprint,#builder-zzz,#builder-alert,#bed-blanket,#bed-pillow,
+    #bed-lamp-glow,#sleeping-builder,#sleeping-body,#shift-board,.builder-msg {{
       animation:none !important;
     }}
     .builder-msg {{ display:none; }}
@@ -538,12 +603,12 @@ def builder_scene(
     square_x = ox + week * STEP
     square_y = oy + row * STEP
 
-    # The worker's boots sit on the bottom row, then climb beside the target.
-    target_worker_x = square_x - 37
-    target_worker_y = square_y - 22
+    # A compact worker leaves the site bunk, then climbs beside the target.
+    target_worker_x = square_x - 32
+    target_worker_y = square_y - 18
     ground_worker_x = target_worker_x
-    ground_worker_y = oy + 6 * STEP + CELL - 35
-    start_x = max(ox + 8, ground_worker_x - 78)
+    ground_worker_y = oy + 6 * STEP + CELL - 30
+    start_x = max(ox + 8, ground_worker_x - 125)
 
     ladder_top = square_y + 6
     ladder_bottom = oy + 6 * STEP + CELL - 1
@@ -612,7 +677,29 @@ def builder_scene(
         scene.append("</g>")
 
     prop_y = oy + 6 * STEP + 4
+    bed_x = start_x
+    bed_y = prop_y - 1
     scene.extend([
+        '<g id="builder-bed" filter="url(#builder-drop)">',
+        f'<ellipse cx="{bed_x + 27}" cy="{bed_y + 14}" rx="29" ry="3" '
+        'fill="#010409" opacity=".55"/>',
+        f'<circle id="bed-lamp-glow" cx="{bed_x - 5}" cy="{bed_y + 1}" '
+        f'r="8" fill="{accent}" opacity=".08"/>',
+        f'<path d="M{bed_x - 5} {bed_y + 11}V{bed_y + 2}h7" fill="none" '
+        'stroke="#8b949e" stroke-width="1.5" stroke-linecap="round"/>',
+        f'<path d="M{bed_x - 8} {bed_y + 2}h8l-2-4h-4z" fill="{accent}" '
+        'stroke="#30363d" stroke-width=".7"/>',
+        f'<rect x="{bed_x}" y="{bed_y + 2}" width="54" height="10" rx="4" '
+        'fill="#dbeafe" stroke="#6e7681" stroke-width=".8"/>',
+        f'<polygon points="{bed_x},{bed_y + 10} {bed_x + 54},{bed_y + 10} '
+        f'{bed_x + 50},{bed_y + 15} {bed_x + 2},{bed_y + 15}" '
+        'fill="#30363d" stroke="#6e7681" stroke-width=".8"/>',
+        f'<rect id="bed-pillow" x="{bed_x + 38}" y="{bed_y + 3}" '
+        'width="14" height="7" rx="3" fill="#ffffff" '
+        'stroke="#93c5fd" stroke-width=".6"/>',
+        f'<path d="M{bed_x + 3} {bed_y + 15}v4M{bed_x + 49} '
+        f'{bed_y + 15}v4" stroke="#8b949e" stroke-width="2"/>',
+        "</g>",
         f'<g transform="translate({square_x - 92} {prop_y - 4})">',
         '<g id="builder-cone">',
         '<path d="M2 9L6 0l4 9z" fill="url(#cone-orange)" '
@@ -654,9 +741,10 @@ def builder_scene(
         f'<circle class="builder-spark c" opacity="0" cx="{square_x + 5}" '
         f'cy="{square_y}" r="1.5" fill="#ffffff"/>',
         f'<g id="builder-route" transform="translate({target_worker_x} {target_worker_y})">',
-        '<g id="builder-pose" filter="url(#builder-drop)">',
+        '<g id="builder-scale" transform="scale(.86)">',
         '<ellipse id="builder-shadow" cx="15" cy="35" rx="15" ry="3" '
         'fill="#010409" opacity=".55"/>',
+        '<g id="builder-pose" filter="url(#builder-drop)">',
         '<g class="builder-leg a">',
         '<path d="M8 26h7v7H8z" fill="url(#overalls-3d)"/>',
         '<path d="M7 32h9v3H7z" fill="url(#boot-3d)"/>',
@@ -735,7 +823,8 @@ def builder_scene(
         '<text class="dizzy-star b" opacity="0" x="27" y="2" '
         'fill="#ffffff" font-size="5">✦</text>',
         "</g>",
-        '<text id="builder-zzz" opacity="0" x="25" y="1" '
+        "</g>",
+        '<text id="builder-zzz" opacity="0" x="36" y="20" '
         'fill="#a78bfa" font-size="7" font-weight="800">Zz</text>',
         '<g id="builder-alert" opacity="0">',
         '<circle cx="31" cy="2" r="5" fill="#f7c948" stroke="#7c4a03"/>',
@@ -743,6 +832,32 @@ def builder_scene(
         'font-size="7" font-weight="900">!</text>',
         "</g>",
         "</g>",
+        '<g id="sleeping-builder" opacity="0" filter="url(#builder-drop)">',
+        '<g id="sleeping-body">',
+        f'<path d="M{bed_x + 13} {bed_y + 5}q13-5 29 2v7H'
+        f'{bed_x + 13}z" fill="url(#shirt-3d)"/>',
+        f'<path d="M{bed_x + 18} {bed_y + 6}h19v8H{bed_x + 18}z" '
+        'fill="url(#overalls-3d)"/>',
+        f'<circle cx="{bed_x + 36}" cy="{bed_y + 5}" r="2.4" '
+        'fill="#f2b38f"/>',
+        "</g>",
+        f'<circle cx="{bed_x + 45}" cy="{bed_y + 7}" r="6.5" '
+        'fill="url(#skin-3d)" stroke="#9a5a3a" stroke-width=".65"/>',
+        f'<path d="M{bed_x + 40} {bed_y + 5}q2-3 5-3" fill="none" '
+        'stroke="#5b2c17" stroke-width="1.2" stroke-linecap="round"/>',
+        f'<path d="M{bed_x + 41} {bed_y + 7}q1.4 1 2.8 0M'
+        f'{bed_x + 46} {bed_y + 7}q1.4 1 2.8 0" fill="none" '
+        'stroke="#5b2c17" stroke-width=".8" stroke-linecap="round"/>',
+        f'<path d="M{bed_x + 43} {bed_y + 10}q2 1.5 4 0" fill="none" '
+        'stroke="#7c2d12" stroke-width=".8" stroke-linecap="round"/>',
+        f'<path d="M{bed_x - 1} {bed_y + 16}q1-6 7-6t7 6z" '
+        'fill="url(#hat-3d)" stroke="#9a6700" stroke-width=".6"/>',
+        f'<rect x="{bed_x - 3}" y="{bed_y + 15}" width="18" height="2.5" '
+        'rx="1.2" fill="url(#hat-brim)"/>',
+        "</g>",
+        f'<path id="bed-blanket" d="M{bed_x + 3} {bed_y + 4}h35v9H'
+        f'{bed_x + 3}q3-4 0-9z" fill="{accent}" stroke="#0d1117" '
+        'stroke-width=".7" opacity=".72"/>',
     ])
 
     scene.extend([

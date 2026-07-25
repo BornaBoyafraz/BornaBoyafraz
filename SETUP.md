@@ -55,10 +55,11 @@ a few minutes after its scheduled time.
 The SVG includes an original, expressive 3D commit builder with a face,
 shaded construction gear, an isometric target block, a toolbox, blueprint,
 cone, ladder, sparks, and dust. Each weekday has its own accent, shift name,
-eight-line dialogue pack, and comic tumble. Forty-eight synchronized
-keyframed sequences make the worker walk in, climb for upper rows, build
-today's square, react, rest, and reset. The animation respects the viewer's
-reduced-motion preference.
+eight-line dialogue pack, and comic tumble. The compact worker follows a
+natural site-shift loop: wake, walk or climb, build with planted feet, return
+to a tiny bed, sleep for a few seconds, then wake and repeat. Fifty-four
+synchronized keyframed sequences drive the character and site. The animation
+respects the viewer's reduced-motion preference.
 
 User-confirmed contribution counts that are not visible in GitHub's
 signed-out calendar—such as private activity—live in `COUNT_OVERRIDES` in

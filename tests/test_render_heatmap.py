@@ -36,6 +36,12 @@ class CommitBuilderSceneTests(unittest.TestCase):
         self.assertIn('id="builder-hammer"', scene)
         self.assertIn('id="target-block"', scene)
         self.assertIn('id="builder-toolbox"', scene)
+        self.assertIn('id="builder-bed"', scene)
+        self.assertIn('id="bed-blanket"', scene)
+        self.assertIn('id="bed-pillow"', scene)
+        self.assertIn('id="builder-scale" transform="scale(.86)"', scene)
+        self.assertIn("animation:leg-left 30s", css)
+        self.assertIn("animation:leg-right 30s", css)
 
     def test_every_weekday_has_20_plus_animations_and_eight_lines(self) -> None:
         first_sunday = dt.date(2026, 7, 19)
