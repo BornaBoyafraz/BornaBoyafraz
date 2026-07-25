@@ -241,7 +241,7 @@ _Adding LeetCode / HackerRank / CodeChef links here soon._
 
 <br/>
 
-<img src="./contrib-heatmap.svg" width="820" alt="Live contribution heatmap — refreshes automatically" />
+<img src="./contrib-heatmap.svg" width="820" alt="Live contribution heatmap with an animated commit construction worker" />
 
 </div>
 

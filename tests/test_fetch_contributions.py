@@ -1,7 +1,11 @@
 import datetime as dt
 import unittest
 
-from scripts.fetch_contributions import account_for_refresh_commit, derive
+from scripts.fetch_contributions import (
+    account_for_refresh_commit,
+    apply_count_overrides,
+    derive,
+)
 
 
 def day(date: str, count: int, level: int = 0) -> dict:
@@ -58,6 +62,20 @@ class ContributionStatsTests(unittest.TestCase):
 
         self.assertEqual(result["days"][-1]["count"], 10)
         self.assertEqual(result["total"], 11)
+
+    def test_user_confirmed_count_override_sets_best_day(self) -> None:
+        days = [
+            day("2026-07-22", 33, 4),
+            day("2026-07-23", 34, 4),
+            day("2026-07-24", 9, 2),
+        ]
+
+        apply_count_overrides(days)
+        result = derive(days, dt.date(2026, 7, 24))
+
+        self.assertEqual(result["total"], 96)
+        self.assertEqual(result["best"], {"date": "2026-07-23", "count": 54})
+        self.assertEqual(result["days"][1]["level"], 5)
 
 
 if __name__ == "__main__":

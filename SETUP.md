@@ -52,6 +52,16 @@ returns a pre-push calendar while indexing a new commit.
 GitHub Actions schedules are best-effort, so a run can occasionally start
 a few minutes after its scheduled time.
 
+The SVG includes an original pixel-art commit builder. Its route is
+calculated from the newest square's weekday: it walks in, uses a ladder
+for higher rows, hammers the square, has a harmless comic tumble, rests,
+and repeats with rotating messages. The animation respects the viewer's
+reduced-motion preference.
+
+User-confirmed contribution counts that are not visible in GitHub's
+signed-out calendar—such as private activity—live in `COUNT_OVERRIDES` in
+`scripts/fetch_contributions.py`.
+
 After the first push, open the repo's **Actions** tab and run
 **Update profile art** once by hand (workflow_dispatch) to confirm it
 commits a fresh SVG.

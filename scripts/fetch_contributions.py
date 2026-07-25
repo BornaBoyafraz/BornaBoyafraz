@@ -23,6 +23,12 @@ URL = f"https://github.com/users/{USERNAME}/contributions"
 OUT = Path(__file__).resolve().parent.parent / "data" / "contributions.json"
 INCLUDE_REFRESH_COMMIT = os.environ.get("INCLUDE_REFRESH_COMMIT") == "1"
 
+# GitHub's signed-out contribution fragment does not expose every private
+# contribution. Keep user-confirmed totals here so refreshes cannot erase them.
+COUNT_OVERRIDES = {
+    "2026-07-23": 54,
+}
+
 
 def fetch_days() -> list[dict]:
     resp = requests.get(URL, headers={"User-Agent": "profile-readme-art"}, timeout=30)
@@ -90,6 +96,14 @@ def account_for_refresh_commit(
          if today["count"] >= threshold),
         default=max(today["level"], 1),
     )
+
+
+def apply_count_overrides(days: list[dict]) -> None:
+    days_by_date = {day["date"]: day for day in days}
+    for date_string, count in COUNT_OVERRIDES.items():
+        if date_string not in days_by_date:
+            continue
+        days_by_date[date_string]["count"] = count
 
 
 def derive(days: list[dict], today: dt.date | None = None) -> dict:
@@ -161,6 +175,7 @@ def main() -> None:
     days = fetch_days()
     if INCLUDE_REFRESH_COMMIT:
         account_for_refresh_commit(days, now.date(), previous_days)
+    apply_count_overrides(days)
     data = derive(days, now.date())
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(data, indent=1), encoding="utf-8")
