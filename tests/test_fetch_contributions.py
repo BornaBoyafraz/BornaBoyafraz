@@ -39,6 +39,26 @@ class ContributionStatsTests(unittest.TestCase):
         self.assertEqual(result["streak_current_start"], "2026-07-23")
         self.assertEqual(result["streak_current_end"], "2026-07-24")
 
+    def test_pending_commit_survives_github_indexing_lag(self) -> None:
+        fetched = [
+            day("2026-07-24", 1, 1),
+            day("2026-07-25", 8, 1),
+        ]
+        previously_committed = [
+            day("2026-07-24", 1, 1),
+            day("2026-07-25", 9, 2),
+        ]
+
+        account_for_refresh_commit(
+            fetched,
+            dt.date(2026, 7, 25),
+            previously_committed,
+        )
+        result = derive(fetched, dt.date(2026, 7, 25))
+
+        self.assertEqual(result["days"][-1]["count"], 10)
+        self.assertEqual(result["total"], 11)
+
 
 if __name__ == "__main__":
     unittest.main()

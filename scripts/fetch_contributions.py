@@ -47,13 +47,29 @@ def fetch_days() -> list[dict]:
     return days
 
 
-def account_for_refresh_commit(days: list[dict], commit_date: dt.date) -> None:
+def account_for_refresh_commit(
+    days: list[dict],
+    commit_date: dt.date,
+    previous_days: list[dict] | None = None,
+) -> None:
     """Include the commit that will publish this freshly generated data.
 
     The workflow fetches GitHub's calendar before its auto-commit exists.
     Without this adjustment, the committed card is permanently one
-    contribution behind and can also lag a day behind on streaks.
+    contribution behind and can also lag a day behind on streaks. GitHub
+    can also briefly return a pre-push calendar, so retain higher counts
+    from the previously committed data until the public index catches up.
     """
+    previous_by_date = {
+        day["date"]: day
+        for day in (previous_days or [])
+    }
+    for day in days:
+        previous = previous_by_date.get(day["date"])
+        if previous and previous["count"] > day["count"]:
+            day["count"] = previous["count"]
+            day["level"] = max(day["level"], previous["level"])
+
     date_string = commit_date.isoformat()
     try:
         today = next(day for day in days if day["date"] == date_string)
@@ -139,9 +155,12 @@ def derive(days: list[dict], today: dt.date | None = None) -> dict:
 
 def main() -> None:
     now = dt.datetime.now(dt.timezone.utc)
+    previous_days = []
+    if INCLUDE_REFRESH_COMMIT and OUT.exists():
+        previous_days = json.loads(OUT.read_text(encoding="utf-8")).get("days", [])
     days = fetch_days()
     if INCLUDE_REFRESH_COMMIT:
-        account_for_refresh_commit(days, now.date())
+        account_for_refresh_commit(days, now.date(), previous_days)
     data = derive(days, now.date())
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(data, indent=1), encoding="utf-8")

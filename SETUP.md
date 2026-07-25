@@ -46,7 +46,8 @@ public HTML at `github.com/users/BornaBoyafraz/contributions`.
 Because the refresh commit does not exist when the calendar is fetched,
 the workflow adds that pending contribution before rendering. This keeps
 the committed total and streak current instead of permanently one commit
-behind.
+behind. It also preserves the last committed count when GitHub briefly
+returns a pre-push calendar while indexing a new commit.
 
 GitHub Actions schedules are best-effort, so a run can occasionally start
 a few minutes after its scheduled time.
