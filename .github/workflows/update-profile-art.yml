@@ -27,6 +27,9 @@ jobs:
           python-version: "3.11"
       - run: pip install requests==2.32.3 beautifulsoup4==4.12.3
       - run: python scripts/fetch_contributions.py
+        env:
+          # Count the auto-commit this run is about to publish.
+          INCLUDE_REFRESH_COMMIT: "1"
       - run: python scripts/render_heatmap_svg.py
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:

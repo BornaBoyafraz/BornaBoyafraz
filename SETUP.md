@@ -43,6 +43,11 @@ the profile owner's configured GitHub email so it can count toward the
 contribution calendar. No API token is needed — the data comes from the
 public HTML at `github.com/users/BornaBoyafraz/contributions`.
 
+Because the refresh commit does not exist when the calendar is fetched,
+the workflow adds that pending contribution before rendering. This keeps
+the committed total and streak current instead of permanently one commit
+behind.
+
 GitHub Actions schedules are best-effort, so a run can occasionally start
 a few minutes after its scheduled time.
 

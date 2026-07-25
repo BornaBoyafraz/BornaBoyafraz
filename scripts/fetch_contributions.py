@@ -11,6 +11,7 @@ Requires: requests, beautifulsoup4
 """
 import datetime as dt
 import json
+import os
 import re
 from pathlib import Path
 
@@ -20,6 +21,7 @@ from bs4 import BeautifulSoup
 USERNAME = "BornaBoyafraz"
 URL = f"https://github.com/users/{USERNAME}/contributions"
 OUT = Path(__file__).resolve().parent.parent / "data" / "contributions.json"
+INCLUDE_REFRESH_COMMIT = os.environ.get("INCLUDE_REFRESH_COMMIT") == "1"
 
 
 def fetch_days() -> list[dict]:
@@ -45,7 +47,37 @@ def fetch_days() -> list[dict]:
     return days
 
 
-def derive(days: list[dict]) -> dict:
+def account_for_refresh_commit(days: list[dict], commit_date: dt.date) -> None:
+    """Include the commit that will publish this freshly generated data.
+
+    The workflow fetches GitHub's calendar before its auto-commit exists.
+    Without this adjustment, the committed card is permanently one
+    contribution behind and can also lag a day behind on streaks.
+    """
+    date_string = commit_date.isoformat()
+    try:
+        today = next(day for day in days if day["date"] == date_string)
+    except StopIteration as exc:
+        raise SystemExit(f"refresh commit date {date_string} is outside the calendar") from exc
+
+    today["count"] += 1
+
+    # Estimate GitHub's next color level from the thresholds visible in the
+    # fetched calendar. The exact count and streak stats do not depend on it.
+    thresholds = {
+        level: min(day["count"] for day in days if day["level"] == level)
+        for level in range(1, 5)
+        if any(day["level"] == level for day in days)
+    }
+    today["level"] = max(
+        (level for level, threshold in thresholds.items()
+         if today["count"] >= threshold),
+        default=max(today["level"], 1),
+    )
+
+
+def derive(days: list[dict], today: dt.date | None = None) -> dict:
+    today = today or dt.datetime.now(dt.timezone.utc).date()
     total = sum(d["count"] for d in days)
     best = max(days, key=lambda d: d["count"])
 
@@ -55,18 +87,34 @@ def derive(days: list[dict]) -> dict:
             if d["count"] == best["count"]:
                 d["level"] = 5
 
-    longest = current = run = 0
+    longest = run = 0
+    run_start = longest_start = longest_end = None
     for d in days:
-        run = run + 1 if d["count"] > 0 else 0
-        longest = max(longest, run)
+        if d["count"] > 0:
+            if run == 0:
+                run_start = d["date"]
+            run += 1
+            if run > longest:
+                longest = run
+                longest_start = run_start
+                longest_end = d["date"]
+        else:
+            run = 0
+            run_start = None
+
     # Current streak counts back from the end; today being empty (so far)
     # shouldn't break it.
     tail = list(reversed(days))
-    if tail and tail[0]["count"] == 0 and tail[0]["date"] == dt.date.today().isoformat():
+    if tail and tail[0]["count"] == 0 and tail[0]["date"] == today.isoformat():
         tail = tail[1:]
+    current = 0
+    current_end = current_start = None
     for d in tail:
         if d["count"] == 0:
             break
+        if current == 0:
+            current_end = d["date"]
+        current_start = d["date"]
         current += 1
 
     months: dict[str, int] = {}
@@ -79,14 +127,22 @@ def derive(days: list[dict]) -> dict:
         "total": total,
         "best": {"date": best["date"], "count": best["count"]},
         "streak_current": current,
+        "streak_current_start": current_start,
+        "streak_current_end": current_end,
         "streak_longest": longest,
+        "streak_longest_start": longest_start,
+        "streak_longest_end": longest_end,
         "months": months,
         "days": days,
     }
 
 
 def main() -> None:
-    data = derive(fetch_days())
+    now = dt.datetime.now(dt.timezone.utc)
+    days = fetch_days()
+    if INCLUDE_REFRESH_COMMIT:
+        account_for_refresh_commit(days, now.date())
+    data = derive(days, now.date())
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(data, indent=1), encoding="utf-8")
     print(f"wrote {OUT} — {data['total']} contributions, "

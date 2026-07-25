@@ -99,9 +99,18 @@ def main() -> None:
     parts.append(f'<text x="{ox + 34 + len(PALETTE) * STEP + 4}" y="{ly + 10}" '
                  f'fill="{TEXT}">More</text>')
 
-    stats = (f'{data["total"]:,} contributions in the last year · '
-             f'streak {data["streak_current"]}d · longest {data["streak_longest"]}d · '
-             f'best {data["best"]["count"]} on {data["best"]["date"]}')
+    longest_start = dt.date.fromisoformat(data["streak_longest_start"])
+    longest_end = dt.date.fromisoformat(data["streak_longest_end"])
+    longest_range = f'{MONTHS[longest_start.month - 1]} {longest_start.day}–'
+    if longest_start.month != longest_end.month:
+        longest_range += f'{MONTHS[longest_end.month - 1]} '
+    longest_range += str(longest_end.day)
+    best_date = dt.date.fromisoformat(data["best"]["date"])
+    best_label = f'{MONTHS[best_date.month - 1]} {best_date.day}'
+    stats = (f'{data["total"]:,} last-year contributions · '
+             f'current {data["streak_current"]}d · '
+             f'longest {data["streak_longest"]}d ({longest_range}) · '
+             f'best {data["best"]["count"]} ({best_label})')
     parts.append(f'<text x="{w - PAD}" y="{ly + 10}" text-anchor="end" '
                  f'fill="{BRIGHT}">{stats}</text>')
 
