@@ -66,7 +66,7 @@
 <rect width="805" height="207" rx="10" fill="#0d1117" stroke="#30363d"/>
 <style>.c{animation:dr .45s ease-out both}@keyframes dr{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:none}}</style>
 <style>
-  :root { --shift-accent:#7897c5; }
+  :root { --shift-accent:#b79b64; }
   /* Motion curves: EASE_MOVE settles with weight, EASE_SWING snaps on
      impact then recovers, EASE_SOFT is for idle secondary motion. */
   #builder-route {
@@ -219,8 +219,8 @@
   @keyframes builder-route {
     0%,3% { transform:translate(619px,117px); }
     17%,22% { transform:translate(744px,117px); }
-    29%,59% { transform:translate(744px,48px); }
-    64% { transform:translate(748px,50px); }
+    29%,59% { transform:translate(744px,62px); }
+    64% { transform:translate(748px,64px); }
     70% { transform:translate(749px,117px); }
     77%,100% { transform:translate(619px,117px); }
   }
@@ -245,7 +245,7 @@
       transform:translateY(-.4px) rotate(0deg) scale(.99,1.01);
     }
     63% { transform:rotate(14deg) scale(1.03,.97); }
-    67% { transform:rotate(52deg) scale(.94); }
+    67% { transform:rotate(64deg) scale(.94); }
     71%,76% { transform:rotate(0deg) scale(1); }
     80%,91% { transform:rotate(0deg) scale(1.06,.72); }
     94% { transform:rotate(0deg) scale(.96,1.04); }
@@ -842,22 +842,21 @@
 <rect x="762" y="136" width="11" height="11" rx="2.5" fill="#39d353" class="c" style="animation-delay:1.254s"/>
 <rect x="776" y="52" width="11" height="11" rx="2.5" fill="#26a641" class="c" style="animation-delay:1.144s"/>
 <rect x="776" y="66" width="11" height="11" rx="2.5" fill="#006d32" class="c" style="animation-delay:1.166s"/>
-<rect class="target-glow" x="772" y="59" width="21" height="22" rx="5" fill="none" stroke="#7897c5"/>
+<rect x="776" y="80" width="11" height="11" rx="2.5" fill="#0e4429" class="c" style="animation-delay:1.188s"/>
+<rect class="target-glow" x="772" y="73" width="21" height="22" rx="5" fill="none" stroke="#b79b64"/>
 <g id="target-block" filter="url(#block-shadow)">
-<polygon id="target-top" points="776,66 787,66 791,62 780,62" fill="url(#block-top)"/>
-<rect id="target-front" x="776" y="66" width="11" height="11" rx="2" fill="url(#block-front)"/>
-<polygon id="target-side" points="787,66 791,62 791,73 787,77" fill="#087f3e"/>
-<path class="target-shine" d="M778 68v7" stroke="#b7ffd1" stroke-width="1.4" stroke-linecap="round"/>
+<polygon id="target-top" points="776,80 787,80 791,76 780,76" fill="url(#block-top)"/>
+<rect id="target-front" x="776" y="80" width="11" height="11" rx="2" fill="url(#block-front)"/>
+<polygon id="target-side" points="787,80 791,76 791,87 787,91" fill="#087f3e"/>
+<path class="target-shine" d="M778 82v7" stroke="#b7ffd1" stroke-width="1.4" stroke-linecap="round"/>
 </g>
 <g class="builder-ladder" stroke-linecap="round" filter="url(#builder-drop)">
-<line x1="748" y1="72" x2="746" y2="146" stroke="#2f353d" stroke-width="4"/>
-<line x1="747" y1="72" x2="745" y2="146" stroke="url(#ladder-gold)" stroke-width="2"/>
-<line x1="760" y1="72" x2="762" y2="146" stroke="#2f353d" stroke-width="4"/>
-<line x1="759" y1="72" x2="761" y2="146" stroke="url(#ladder-gold)" stroke-width="2"/>
-<line x1="747" y1="76" x2="759" y2="76" stroke="#8b95a2" stroke-width="1.6"/>
-<line x1="747" y1="83" x2="759" y2="83" stroke="#8b95a2" stroke-width="1.6"/>
+<line x1="748" y1="86" x2="746" y2="146" stroke="#2f353d" stroke-width="4"/>
+<line x1="747" y1="86" x2="745" y2="146" stroke="url(#ladder-gold)" stroke-width="2"/>
+<line x1="760" y1="86" x2="762" y2="146" stroke="#2f353d" stroke-width="4"/>
+<line x1="759" y1="86" x2="761" y2="146" stroke="url(#ladder-gold)" stroke-width="2"/>
 <line x1="747" y1="90" x2="759" y2="90" stroke="#8b95a2" stroke-width="1.6"/>
-<line x1="746" y1="97" x2="760" y2="97" stroke="#8b95a2" stroke-width="1.6"/>
+<line x1="747" y1="97" x2="759" y2="97" stroke="#8b95a2" stroke-width="1.6"/>
 <line x1="746" y1="104" x2="760" y2="104" stroke="#8b95a2" stroke-width="1.6"/>
 <line x1="746" y1="111" x2="760" y2="111" stroke="#8b95a2" stroke-width="1.6"/>
 <line x1="746" y1="118" x2="760" y2="118" stroke="#8b95a2" stroke-width="1.6"/>
@@ -883,13 +882,13 @@
 </g>
 <circle cx="7" cy="5" r=".9" fill="#c9a55f"/>
 </g></g>
-<circle class="builder-dust a" opacity="0" cx="774" cy="74" r="2.2" fill="#c9a55f"/>
-<circle class="builder-dust b" opacity="0" cx="780" cy="75" r="1.7" fill="#c9d1d9"/>
-<circle class="builder-dust c" opacity="0" cx="777" cy="72" r="1.4" fill="#ffffff"/>
-<path class="builder-spark a" opacity="0" d="M777 68l3-3M777 65l3 3" stroke="#7897c5" stroke-width="1.2"/>
-<path class="builder-spark b" opacity="0" d="M783 69l3-3M783 66l3 3" stroke="#c9a55f" stroke-width="1.2"/>
-<circle class="builder-spark c" opacity="0" cx="781" cy="66" r="1.5" fill="#ffffff"/>
-<g id="builder-route" transform="translate(744 48)">
+<circle class="builder-dust a" opacity="0" cx="774" cy="88" r="2.2" fill="#c9a55f"/>
+<circle class="builder-dust b" opacity="0" cx="780" cy="89" r="1.7" fill="#c9d1d9"/>
+<circle class="builder-dust c" opacity="0" cx="777" cy="86" r="1.4" fill="#ffffff"/>
+<path class="builder-spark a" opacity="0" d="M777 82l3-3M777 79l3 3" stroke="#b79b64" stroke-width="1.2"/>
+<path class="builder-spark b" opacity="0" d="M783 83l3-3M783 80l3 3" stroke="#c9a55f" stroke-width="1.2"/>
+<circle class="builder-spark c" opacity="0" cx="781" cy="80" r="1.5" fill="#ffffff"/>
+<g id="builder-route" transform="translate(744 62)">
 <g id="builder-scale" transform="scale(.86)">
 <ellipse id="builder-shadow" cx="15" cy="35" rx="15" ry="3" fill="#010409" opacity=".46"/>
 <g id="builder-pose" filter="url(#builder-drop)">
@@ -976,62 +975,62 @@
 <path d="M618 168q1-6 7-6t7 6z" fill="url(#hat-3d)" stroke="#6f5628" stroke-width=".6"/>
 <rect x="616" y="167" width="18" height="2.5" rx="1.2" fill="url(#hat-brim)"/>
 </g>
-<path id="bed-blanket" d="M622 156h35v9H622q3-4 0-9z" fill="#7897c5" stroke="#252d3a" stroke-width=".7" opacity="0"/>
+<path id="bed-blanket" d="M622 156h35v9H622q3-4 0-9z" fill="#b79b64" stroke="#252d3a" stroke-width=".7" opacity="0"/>
 <g class="builder-msg msg-0" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
-<rect x="660" y="6" width="127" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M661 11v17" stroke="#7897c5" stroke-width="2" stroke-linecap="round"/>
-<text x="668" y="15" fill="#7897c5" font-size="5.5" font-weight="700" letter-spacing=".55">MONDAY</text>
-<text x="668" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Monday. Blueprint loaded.</text>
+<rect x="699" y="6" width="88" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
+<path d="M700 11v17" stroke="#b79b64" stroke-width="2" stroke-linecap="round"/>
+<text x="707" y="15" fill="#b79b64" font-size="5.5" font-weight="700" letter-spacing=".55">TUESDAY</text>
+<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Toolbox open.</text>
 </g>
 <g class="builder-msg msg-1" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
-<rect x="651" y="6" width="136" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M652 11v17" stroke="#7897c5" stroke-width="2" stroke-linecap="round"/>
-<text x="659" y="15" fill="#7897c5" font-size="5.5" font-weight="700" letter-spacing=".55">MONDAY</text>
-<text x="659" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Measure twice, commit once.</text>
+<rect x="664" y="6" width="123" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
+<path d="M665 11v17" stroke="#b79b64" stroke-width="2" stroke-linecap="round"/>
+<text x="672" y="15" fill="#b79b64" font-size="5.5" font-weight="700" letter-spacing=".55">TUESDAY</text>
+<text x="672" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Found a loose semicolon.</text>
 </g>
 <g class="builder-msg msg-2" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
-<rect x="655" y="6" width="132" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M656 11v17" stroke="#7897c5" stroke-width="2" stroke-linecap="round"/>
-<text x="663" y="15" fill="#7897c5" font-size="5.5" font-weight="700" letter-spacing=".55">MONDAY</text>
-<text x="663" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Squaring up today's block.</text>
+<rect x="673" y="6" width="114" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
+<path d="M674 11v17" stroke="#b79b64" stroke-width="2" stroke-linecap="round"/>
+<text x="681" y="15" fill="#b79b64" font-size="5.5" font-weight="700" letter-spacing=".55">TUESDAY</text>
+<text x="681" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Tightening the joints.</text>
 </g>
 <g class="builder-msg msg-3" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
 <rect x="699" y="6" width="88" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M700 11v17" stroke="#7897c5" stroke-width="2" stroke-linecap="round"/>
-<text x="707" y="15" fill="#7897c5" font-size="5.5" font-weight="700" letter-spacing=".55">MONDAY</text>
-<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">That'll hold.</text>
+<path d="M700 11v17" stroke="#b79b64" stroke-width="2" stroke-linecap="round"/>
+<text x="707" y="15" fill="#b79b64" font-size="5.5" font-weight="700" letter-spacing=".55">TUESDAY</text>
+<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Ship it.</text>
 </g>
 <g class="builder-msg msg-4" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
 <rect x="699" y="6" width="88" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M700 11v17" stroke="#7897c5" stroke-width="2" stroke-linecap="round"/>
-<text x="707" y="15" fill="#7897c5" font-size="5.5" font-weight="700" letter-spacing=".55">MONDAY</text>
-<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Clean strike.</text>
+<path d="M700 11v17" stroke="#b79b64" stroke-width="2" stroke-linecap="round"/>
+<text x="707" y="15" fill="#b79b64" font-size="5.5" font-weight="700" letter-spacing=".55">TUESDAY</text>
+<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Level. Finally.</text>
 </g>
 <g class="builder-msg msg-5" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
-<rect x="673" y="6" width="114" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M674 11v17" stroke="#7897c5" stroke-width="2" stroke-linecap="round"/>
-<text x="681" y="15" fill="#7897c5" font-size="5.5" font-weight="700" letter-spacing=".55">MONDAY</text>
-<text x="681" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Clocking out. Briefly.</text>
+<rect x="699" y="6" width="88" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
+<path d="M700 11v17" stroke="#b79b64" stroke-width="2" stroke-linecap="round"/>
+<text x="707" y="15" fill="#b79b64" font-size="5.5" font-weight="700" letter-spacing=".55">TUESDAY</text>
+<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Taking five.</text>
 </g>
 <g class="builder-msg msg-6" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
-<rect x="695" y="6" width="92" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M696 11v17" stroke="#7897c5" stroke-width="2" stroke-linecap="round"/>
-<text x="703" y="15" fill="#7897c5" font-size="5.5" font-weight="700" letter-spacing=".55">MONDAY</text>
-<text x="703" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Compiling dreams…</text>
+<rect x="678" y="6" width="109" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
+<path d="M679 11v17" stroke="#b79b64" stroke-width="2" stroke-linecap="round"/>
+<text x="686" y="15" fill="#b79b64" font-size="5.5" font-weight="700" letter-spacing=".55">TUESDAY</text>
+<text x="686" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Tools on the charger…</text>
 </g>
 <g class="builder-msg msg-7" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
 <rect x="678" y="6" width="109" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M679 11v17" stroke="#7897c5" stroke-width="2" stroke-linecap="round"/>
-<text x="686" y="15" fill="#7897c5" font-size="5.5" font-weight="700" letter-spacing=".55">MONDAY</text>
-<text x="686" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Back on the scaffold.</text>
+<path d="M679 11v17" stroke="#b79b64" stroke-width="2" stroke-linecap="round"/>
+<text x="686" y="15" fill="#b79b64" font-size="5.5" font-weight="700" letter-spacing=".55">TUESDAY</text>
+<text x="686" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Nap merged. Resuming.</text>
 </g>
 <text x="48" y="184" fill="#8b949e" font-size="8.5">Less</text>
 <rect x="82" y="175" width="11" height="11" rx="2.5" fill="#161b22"/>
@@ -1041,5 +1040,5 @@
 <rect x="138" y="175" width="11" height="11" rx="2.5" fill="#39d353"/>
 <rect x="152" y="175" width="11" height="11" rx="2.5" fill="#69f0a0"/>
 <text x="170" y="185" fill="#8b949e" font-size="8.5">More</text>
-<text x="787" y="185" text-anchor="end" fill="#c9d1d9" font-size="8.5" letter-spacing=".05">413 last-year contributions · current 10d · longest 10d (Jul 18–27) · best 54 (Jul 23)</text>
+<text x="787" y="185" text-anchor="end" fill="#c9d1d9" font-size="8.5" letter-spacing=".05">414 last-year contributions · current 11d · longest 11d (Jul 18–28) · best 54 (Jul 23)</text>
 </svg>
