@@ -204,7 +204,7 @@ Selected member of TKS — an innovation program for ambitious students working 
 
 <div align="center">
 
-_Adding LeetCode / HackerRank / CodeChef links here soon._
+[![LeetCode](https://img.shields.io/badge/LeetCode-Borna__Afraz__24-7C3AED?style=for-the-badge&logo=leetcode&logoColor=white&labelColor=0d1117)](https://leetcode.com/u/Borna_Afraz_24/)
 
 </div>
 
