@@ -66,7 +66,7 @@
 <rect width="805" height="207" rx="10" fill="#0d1117" stroke="#30363d"/>
 <style>.c{animation:dr .45s ease-out both}@keyframes dr{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:none}}</style>
 <style>
-  :root { --shift-accent:#6f9fa3; }
+  :root { --shift-accent:#6d9b7b; }
   /* Motion curves: EASE_MOVE settles with weight, EASE_SWING snaps on
      impact then recovers, EASE_SOFT is for idle secondary motion. */
   #builder-route {
@@ -219,8 +219,8 @@
   @keyframes builder-route {
     0%,3% { transform:translate(619px,117px); }
     17%,22% { transform:translate(744px,117px); }
-    29%,59% { transform:translate(744px,90px); }
-    64% { transform:translate(748px,92px); }
+    29%,59% { transform:translate(744px,104px); }
+    64% { transform:translate(748px,106px); }
     70% { transform:translate(749px,117px); }
     77%,100% { transform:translate(619px,117px); }
   }
@@ -245,7 +245,7 @@
       transform:translateY(-.4px) rotate(0deg) scale(.99,1.01);
     }
     63% { transform:rotate(14deg) scale(1.03,.97); }
-    67% { transform:rotate(70deg) scale(.94); }
+    67% { transform:rotate(55deg) scale(.94); }
     71%,76% { transform:rotate(0deg) scale(1); }
     80%,91% { transform:rotate(0deg) scale(1.06,.72); }
     94% { transform:rotate(0deg) scale(.96,1.04); }
@@ -845,22 +845,21 @@
 <rect x="776" y="80" width="11" height="11" rx="2.5" fill="#26a641" class="c" style="animation-delay:1.188s"/>
 <rect x="776" y="94" width="11" height="11" rx="2.5" fill="#006d32" class="c" style="animation-delay:1.210s"/>
 <rect x="776" y="108" width="11" height="11" rx="2.5" fill="#006d32" class="c" style="animation-delay:1.232s"/>
-<rect class="target-glow" x="772" y="101" width="21" height="22" rx="5" fill="none" stroke="#6f9fa3"/>
+<rect x="776" y="122" width="11" height="11" rx="2.5" fill="#0e4429" class="c" style="animation-delay:1.254s"/>
+<rect class="target-glow" x="772" y="115" width="21" height="22" rx="5" fill="none" stroke="#6d9b7b"/>
 <g id="target-block" filter="url(#block-shadow)">
-<polygon id="target-top" points="776,108 787,108 791,104 780,104" fill="url(#block-top)"/>
-<rect id="target-front" x="776" y="108" width="11" height="11" rx="2" fill="url(#block-front)"/>
-<polygon id="target-side" points="787,108 791,104 791,115 787,119" fill="#087f3e"/>
-<path class="target-shine" d="M778 110v7" stroke="#b7ffd1" stroke-width="1.4" stroke-linecap="round"/>
+<polygon id="target-top" points="776,122 787,122 791,118 780,118" fill="url(#block-top)"/>
+<rect id="target-front" x="776" y="122" width="11" height="11" rx="2" fill="url(#block-front)"/>
+<polygon id="target-side" points="787,122 791,118 791,129 787,133" fill="#087f3e"/>
+<path class="target-shine" d="M778 124v7" stroke="#b7ffd1" stroke-width="1.4" stroke-linecap="round"/>
 </g>
 <g class="builder-ladder" stroke-linecap="round" filter="url(#builder-drop)">
-<line x1="748" y1="114" x2="746" y2="146" stroke="#2f353d" stroke-width="4"/>
-<line x1="747" y1="114" x2="745" y2="146" stroke="url(#ladder-gold)" stroke-width="2"/>
-<line x1="760" y1="114" x2="762" y2="146" stroke="#2f353d" stroke-width="4"/>
-<line x1="759" y1="114" x2="761" y2="146" stroke="url(#ladder-gold)" stroke-width="2"/>
-<line x1="747" y1="118" x2="759" y2="118" stroke="#8b95a2" stroke-width="1.6"/>
-<line x1="746" y1="125" x2="760" y2="125" stroke="#8b95a2" stroke-width="1.6"/>
-<line x1="746" y1="132" x2="760" y2="132" stroke="#8b95a2" stroke-width="1.6"/>
-<line x1="745" y1="139" x2="761" y2="139" stroke="#8b95a2" stroke-width="1.6"/>
+<line x1="748" y1="128" x2="746" y2="146" stroke="#2f353d" stroke-width="4"/>
+<line x1="747" y1="128" x2="745" y2="146" stroke="url(#ladder-gold)" stroke-width="2"/>
+<line x1="760" y1="128" x2="762" y2="146" stroke="#2f353d" stroke-width="4"/>
+<line x1="759" y1="128" x2="761" y2="146" stroke="url(#ladder-gold)" stroke-width="2"/>
+<line x1="747" y1="132" x2="759" y2="132" stroke="#8b95a2" stroke-width="1.6"/>
+<line x1="746" y1="139" x2="760" y2="139" stroke="#8b95a2" stroke-width="1.6"/>
 </g>
 <g id="builder-bed" opacity="0" filter="url(#builder-drop)">
 <ellipse cx="646" cy="166" rx="27" ry="2.5" fill="#010409" opacity=".48"/>
@@ -880,13 +879,13 @@
 </g>
 <circle cx="7" cy="5" r=".9" fill="#c9a55f"/>
 </g></g>
-<circle class="builder-dust a" opacity="0" cx="774" cy="116" r="2.2" fill="#c9a55f"/>
-<circle class="builder-dust b" opacity="0" cx="780" cy="117" r="1.7" fill="#c9d1d9"/>
-<circle class="builder-dust c" opacity="0" cx="777" cy="114" r="1.4" fill="#ffffff"/>
-<path class="builder-spark a" opacity="0" d="M777 110l3-3M777 107l3 3" stroke="#6f9fa3" stroke-width="1.2"/>
-<path class="builder-spark b" opacity="0" d="M783 111l3-3M783 108l3 3" stroke="#c9a55f" stroke-width="1.2"/>
-<circle class="builder-spark c" opacity="0" cx="781" cy="108" r="1.5" fill="#ffffff"/>
-<g id="builder-route" transform="translate(744 90)">
+<circle class="builder-dust a" opacity="0" cx="774" cy="130" r="2.2" fill="#c9a55f"/>
+<circle class="builder-dust b" opacity="0" cx="780" cy="131" r="1.7" fill="#c9d1d9"/>
+<circle class="builder-dust c" opacity="0" cx="777" cy="128" r="1.4" fill="#ffffff"/>
+<path class="builder-spark a" opacity="0" d="M777 124l3-3M777 121l3 3" stroke="#6d9b7b" stroke-width="1.2"/>
+<path class="builder-spark b" opacity="0" d="M783 125l3-3M783 122l3 3" stroke="#c9a55f" stroke-width="1.2"/>
+<circle class="builder-spark c" opacity="0" cx="781" cy="122" r="1.5" fill="#ffffff"/>
+<g id="builder-route" transform="translate(744 104)">
 <g id="builder-scale" transform="scale(.86)">
 <ellipse id="builder-shadow" cx="15" cy="35" rx="15" ry="3" fill="#010409" opacity=".46"/>
 <g id="builder-pose" filter="url(#builder-drop)">
@@ -973,62 +972,62 @@
 <path d="M618 168q1-6 7-6t7 6z" fill="url(#hat-3d)" stroke="#6f5628" stroke-width=".6"/>
 <rect x="616" y="167" width="18" height="2.5" rx="1.2" fill="url(#hat-brim)"/>
 </g>
-<path id="bed-blanket" d="M622 156h35v9H622q3-4 0-9z" fill="#6f9fa3" stroke="#252d3a" stroke-width=".7" opacity="0"/>
+<path id="bed-blanket" d="M622 156h35v9H622q3-4 0-9z" fill="#6d9b7b" stroke="#252d3a" stroke-width=".7" opacity="0"/>
 <g class="builder-msg msg-0" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
-<rect x="678" y="6" width="109" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M679 11v17" stroke="#6f9fa3" stroke-width="2" stroke-linecap="round"/>
-<text x="686" y="15" fill="#6f9fa3" font-size="5.5" font-weight="700" letter-spacing=".55">THURSDAY</text>
-<text x="686" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Checking the corners.</text>
+<rect x="695" y="6" width="92" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
+<path d="M696 11v17" stroke="#6d9b7b" stroke-width="2" stroke-linecap="round"/>
+<text x="703" y="15" fill="#6d9b7b" font-size="5.5" font-weight="700" letter-spacing=".55">FRIDAY</text>
+<text x="703" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Friday. Ship day.</text>
 </g>
 <g class="builder-msg msg-1" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
-<rect x="695" y="6" width="92" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M696 11v17" stroke="#6f9fa3" stroke-width="2" stroke-linecap="round"/>
-<text x="703" y="15" fill="#6f9fa3" font-size="5.5" font-weight="700" letter-spacing=".55">THURSDAY</text>
-<text x="703" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Depth reads well.</text>
+<rect x="699" y="6" width="88" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
+<path d="M700 11v17" stroke="#6d9b7b" stroke-width="2" stroke-linecap="round"/>
+<text x="707" y="15" fill="#6d9b7b" font-size="5.5" font-weight="700" letter-spacing=".55">FRIDAY</text>
+<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Last checks.</text>
 </g>
 <g class="builder-msg msg-2" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
-<rect x="695" y="6" width="92" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M696 11v17" stroke="#6f9fa3" stroke-width="2" stroke-linecap="round"/>
-<text x="703" y="15" fill="#6f9fa3" font-size="5.5" font-weight="700" letter-spacing=".55">THURSDAY</text>
-<text x="703" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">One clean strike.</text>
+<rect x="699" y="6" width="88" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
+<path d="M700 11v17" stroke="#6d9b7b" stroke-width="2" stroke-linecap="round"/>
+<text x="707" y="15" fill="#6d9b7b" font-size="5.5" font-weight="700" letter-spacing=".55">FRIDAY</text>
+<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Looking glossy.</text>
 </g>
 <g class="builder-msg msg-3" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
-<rect x="699" y="6" width="88" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M700 11v17" stroke="#6f9fa3" stroke-width="2" stroke-linecap="round"/>
-<text x="707" y="15" fill="#6f9fa3" font-size="5.5" font-weight="700" letter-spacing=".55">THURSDAY</text>
-<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Square and true.</text>
+<rect x="660" y="6" width="127" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
+<path d="M661 11v17" stroke="#6d9b7b" stroke-width="2" stroke-linecap="round"/>
+<text x="668" y="15" fill="#6d9b7b" font-size="5.5" font-weight="700" letter-spacing=".55">FRIDAY</text>
+<text x="668" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Stand clear — committing.</text>
 </g>
 <g class="builder-msg msg-4" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
-<rect x="660" y="6" width="127" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M661 11v17" stroke="#6f9fa3" stroke-width="2" stroke-linecap="round"/>
-<text x="668" y="15" fill="#6f9fa3" font-size="5.5" font-weight="700" letter-spacing=".55">THURSDAY</text>
-<text x="668" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Hard hat earned its keep.</text>
+<rect x="699" y="6" width="88" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
+<path d="M700 11v17" stroke="#6d9b7b" stroke-width="2" stroke-linecap="round"/>
+<text x="707" y="15" fill="#6d9b7b" font-size="5.5" font-weight="700" letter-spacing=".55">FRIDAY</text>
+<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Merged.</text>
 </g>
 <g class="builder-msg msg-5" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
 <rect x="699" y="6" width="88" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M700 11v17" stroke="#6f9fa3" stroke-width="2" stroke-linecap="round"/>
-<text x="707" y="15" fill="#6f9fa3" font-size="5.5" font-weight="700" letter-spacing=".55">THURSDAY</text>
-<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Stepping away.</text>
+<path d="M700 11v17" stroke="#6d9b7b" stroke-width="2" stroke-linecap="round"/>
+<text x="707" y="15" fill="#6d9b7b" font-size="5.5" font-weight="700" letter-spacing=".55">FRIDAY</text>
+<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Weekend branch.</text>
 </g>
 <g class="builder-msg msg-6" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
-<rect x="699" y="6" width="88" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M700 11v17" stroke="#6f9fa3" stroke-width="2" stroke-linecap="round"/>
-<text x="707" y="15" fill="#6f9fa3" font-size="5.5" font-weight="700" letter-spacing=".55">THURSDAY</text>
-<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Off the clock…</text>
+<rect x="691" y="6" width="96" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
+<path d="M692 11v17" stroke="#6d9b7b" stroke-width="2" stroke-linecap="round"/>
+<text x="699" y="15" fill="#6d9b7b" font-size="5.5" font-weight="700" letter-spacing=".55">FRIDAY</text>
+<text x="699" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Dreaming of green…</text>
 </g>
 <g class="builder-msg msg-7" opacity="0">
 <path d="M770 33h8l-3 5z" fill="#111722" stroke="#4b5565" stroke-width=".7"/>
-<rect x="699" y="6" width="88" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
-<path d="M700 11v17" stroke="#6f9fa3" stroke-width="2" stroke-linecap="round"/>
-<text x="707" y="15" fill="#6f9fa3" font-size="5.5" font-weight="700" letter-spacing=".55">THURSDAY</text>
-<text x="707" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Lifting again.</text>
+<rect x="682" y="6" width="105" height="27" rx="5" fill="url(#bubble-bg)" stroke="#4b5565" stroke-width=".8"/>
+<path d="M683 11v17" stroke="#6d9b7b" stroke-width="2" stroke-linecap="round"/>
+<text x="690" y="15" fill="#6d9b7b" font-size="5.5" font-weight="700" letter-spacing=".55">FRIDAY</text>
+<text x="690" y="26.5" fill="#e2e8f0" font-size="7.6" font-weight="600">Stretch. Ship again.</text>
 </g>
 <text x="48" y="184" fill="#8b949e" font-size="8.5">Less</text>
 <rect x="82" y="175" width="11" height="11" rx="2.5" fill="#161b22"/>
@@ -1038,5 +1037,5 @@
 <rect x="138" y="175" width="11" height="11" rx="2.5" fill="#39d353"/>
 <rect x="152" y="175" width="11" height="11" rx="2.5" fill="#69f0a0"/>
 <text x="170" y="185" fill="#8b949e" font-size="8.5">More</text>
-<text x="787" y="185" text-anchor="end" fill="#c9d1d9" font-size="8.5" letter-spacing=".05">573 last-year contributions · current 20d · longest 20d (Jul 18–Aug 6) · best 54 (Jul 23)</text>
+<text x="787" y="185" text-anchor="end" fill="#c9d1d9" font-size="8.5" letter-spacing=".05">574 last-year contributions · current 21d · longest 21d (Jul 18–Aug 7) · best 54 (Jul 23)</text>
 </svg>
