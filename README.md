@@ -214,10 +214,10 @@ Selected member of TKS — an innovation program for ambitious students working 
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api?username=BornaBoyafraz&show_icons=true&hide_border=true&count_private=false&include_all_commits=true&bg_color=0d1117&title_color=a78bfa&icon_color=8b5cf6&text_color=c9d1d9&ring_color=8b5cf6" alt="GitHub Stats" />
-<img height="165" src="https://streak-stats.demolab.com?user=BornaBoyafraz&hide_border=true&background=0d1117&border=0d1117&stroke=8b5cf6&ring=a78bfa&fire=c4b5fd&currStreakLabel=a78bfa&sideLabels=c9d1d9&dates=8b949e&currStreakNum=ffffff&sideNums=ffffff" alt="GitHub Streak" />
+<img height="176" src="./stats-card.svg" alt="GitHub stats — self-hosted, refreshes automatically" />
+<img height="176" src="./top-langs.svg" alt="Most used languages — self-hosted, refreshes automatically" />
 
-<img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=BornaBoyafraz&layout=compact&hide_border=true&langs_count=8&bg_color=0d1117&title_color=a78bfa&text_color=c9d1d9" alt="Top Languages" />
+<img height="176" src="https://streak-stats.demolab.com?user=BornaBoyafraz&hide_border=true&background=0d1117&border=0d1117&stroke=8b5cf6&ring=a78bfa&fire=c4b5fd&currStreakLabel=a78bfa&sideLabels=c9d1d9&dates=8b949e&currStreakNum=ffffff&sideNums=ffffff" alt="GitHub Streak" />
 
 </div>
 

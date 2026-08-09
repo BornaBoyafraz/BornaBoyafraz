@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="150" viewBox="0 0 350 150" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" role="img">
+<title>Most Used Languages</title>
+<rect x=".5" y=".5" width="349" height="149" rx="10" fill="#0d1117" stroke="#30363d"/>
+<text x="20" y="30" fill="#a78bfa" font-size="14" font-weight="700">Most Used Languages</text>
+<line x1="20" y1="41" x2="330" y2="41" stroke="#30363d"/>
+<clipPath id="barclip"><rect x="20" y="58" width="310" height="9" rx="4.5"/></clipPath>
+<g clip-path="url(#barclip)">
+<rect x="20.00" y="58" width="144.34" height="9" fill="#3178c6"/>
+<rect x="164.34" y="58" width="107.46" height="9" fill="#3572A5"/>
+<rect x="271.80" y="58" width="27.42" height="9" fill="#f1e05a"/>
+<rect x="299.22" y="58" width="21.35" height="9" fill="#663399"/>
+<rect x="320.58" y="58" width="7.36" height="9" fill="#e34c26"/>
+<rect x="327.94" y="58" width="2.06" height="9" fill="#b07219"/>
+</g>
+<circle cx="25" cy="84" r="5" fill="#3178c6"/><text x="36" y="88" fill="#c9d1d9">TypeScript</text><text x="168" y="88" fill="#8b949e" text-anchor="end">46.6%</text>
+<circle cx="183" cy="84" r="5" fill="#3572A5"/><text x="194" y="88" fill="#c9d1d9">Python</text><text x="326" y="88" fill="#8b949e" text-anchor="end">34.7%</text>
+<circle cx="25" cy="106" r="5" fill="#f1e05a"/><text x="36" y="110" fill="#c9d1d9">JavaScript</text><text x="168" y="110" fill="#8b949e" text-anchor="end">8.8%</text>
+<circle cx="183" cy="106" r="5" fill="#663399"/><text x="194" y="110" fill="#c9d1d9">CSS</text><text x="326" y="110" fill="#8b949e" text-anchor="end">6.9%</text>
+<circle cx="25" cy="128" r="5" fill="#e34c26"/><text x="36" y="132" fill="#c9d1d9">HTML</text><text x="168" y="132" fill="#8b949e" text-anchor="end">2.4%</text>
+<circle cx="183" cy="128" r="5" fill="#b07219"/><text x="194" y="132" fill="#c9d1d9">Java</text><text x="326" y="132" fill="#8b949e" text-anchor="end">0.7%</text>
+</svg>

@@ -31,6 +31,12 @@ jobs:
           # Count the auto-commit this run is about to publish.
           INCLUDE_REFRESH_COMMIT: "1"
       - run: python scripts/render_heatmap_svg.py
+      # Self-hosted replacements for the github-readme-stats widgets, whose
+      # shared public instances kept rate-limiting into broken cards.
+      - run: python scripts/fetch_github_stats.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: python scripts/render_stats_svg.py
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           # The refreshed timestamp makes each successful run produce one commit.
@@ -38,4 +44,6 @@ jobs:
           commit_user_name: "Borna Afraz"
           commit_user_email: "bornaboyafraz@gmail.com"
           commit_author: "Borna Afraz <bornaboyafraz@gmail.com>"
-          file_pattern: "data/contributions.json contrib-heatmap.svg"
+          file_pattern: >-
+            data/contributions.json contrib-heatmap.svg
+            data/github-stats.json stats-card.svg top-langs.svg
