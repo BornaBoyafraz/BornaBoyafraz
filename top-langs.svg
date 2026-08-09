@@ -5,15 +5,15 @@
 <line x1="20" y1="41" x2="330" y2="41" stroke="#30363d"/>
 <clipPath id="barclip"><rect x="20" y="58" width="310" height="9" rx="4.5"/></clipPath>
 <g clip-path="url(#barclip)">
-<rect x="20.00" y="58" width="144.34" height="9" fill="#3178c6"/>
-<rect x="164.34" y="58" width="107.46" height="9" fill="#3572A5"/>
-<rect x="271.80" y="58" width="27.42" height="9" fill="#f1e05a"/>
-<rect x="299.22" y="58" width="21.35" height="9" fill="#663399"/>
-<rect x="320.58" y="58" width="7.36" height="9" fill="#e34c26"/>
+<rect x="20.00" y="58" width="143.80" height="9" fill="#3178c6"/>
+<rect x="163.80" y="58" width="108.23" height="9" fill="#3572A5"/>
+<rect x="272.02" y="58" width="27.32" height="9" fill="#f1e05a"/>
+<rect x="299.34" y="58" width="21.27" height="9" fill="#663399"/>
+<rect x="320.61" y="58" width="7.33" height="9" fill="#e34c26"/>
 <rect x="327.94" y="58" width="2.06" height="9" fill="#b07219"/>
 </g>
-<circle cx="25" cy="84" r="5" fill="#3178c6"/><text x="36" y="88" fill="#c9d1d9">TypeScript</text><text x="168" y="88" fill="#8b949e" text-anchor="end">46.6%</text>
-<circle cx="183" cy="84" r="5" fill="#3572A5"/><text x="194" y="88" fill="#c9d1d9">Python</text><text x="326" y="88" fill="#8b949e" text-anchor="end">34.7%</text>
+<circle cx="25" cy="84" r="5" fill="#3178c6"/><text x="36" y="88" fill="#c9d1d9">TypeScript</text><text x="168" y="88" fill="#8b949e" text-anchor="end">46.4%</text>
+<circle cx="183" cy="84" r="5" fill="#3572A5"/><text x="194" y="88" fill="#c9d1d9">Python</text><text x="326" y="88" fill="#8b949e" text-anchor="end">34.9%</text>
 <circle cx="25" cy="106" r="5" fill="#f1e05a"/><text x="36" y="110" fill="#c9d1d9">JavaScript</text><text x="168" y="110" fill="#8b949e" text-anchor="end">8.8%</text>
 <circle cx="183" cy="106" r="5" fill="#663399"/><text x="194" y="110" fill="#c9d1d9">CSS</text><text x="326" y="110" fill="#8b949e" text-anchor="end">6.9%</text>
 <circle cx="25" cy="128" r="5" fill="#e34c26"/><text x="36" y="132" fill="#c9d1d9">HTML</text><text x="168" y="132" fill="#8b949e" text-anchor="end">2.4%</text>
