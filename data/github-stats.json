@@ -2,21 +2,21 @@
  "user": "BornaBoyafraz",
  "followers": 4,
  "following": 6,
- "repos": 12,
- "stars": 9,
+ "repos": 13,
+ "stars": 10,
  "forks": 0,
- "commits": 656,
+ "commits": 661,
  "languages": {
-  "TypeScript": 986119,
-  "Python": 742184,
+  "TypeScript": 987100,
+  "Python": 744934,
   "JavaScript": 187332,
   "CSS": 145890,
   "HTML": 50294,
   "Java": 14429,
   "PLpgSQL": 7135,
+  "Shell": 1550,
   "Dockerfile": 1515,
   "Makefile": 1252,
-  "Shell": 771,
   "Batchfile": 333
  }
 }
