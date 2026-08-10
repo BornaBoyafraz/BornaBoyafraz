@@ -5,18 +5,18 @@
  "repos": 13,
  "stars": 10,
  "forks": 0,
- "commits": 661,
+ "commits": 664,
  "languages": {
   "TypeScript": 987100,
-  "Python": 744934,
-  "JavaScript": 187332,
-  "CSS": 145890,
-  "HTML": 50294,
+  "Python": 726435,
+  "JavaScript": 155328,
+  "CSS": 86001,
+  "HTML": 18863,
   "Java": 14429,
   "PLpgSQL": 7135,
   "Shell": 1550,
-  "Dockerfile": 1515,
-  "Makefile": 1252,
+  "Makefile": 550,
+  "Dockerfile": 501,
   "Batchfile": 333
  }
 }
