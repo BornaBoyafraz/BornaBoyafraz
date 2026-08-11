@@ -842,7 +842,7 @@
 <rect x="762" y="136" width="11" height="11" rx="2.5" fill="#39d353" class="c" style="animation-delay:1.254s"/>
 <rect x="776" y="52" width="11" height="11" rx="2.5" fill="#39d353" class="c" style="animation-delay:1.144s"/>
 <rect x="776" y="66" width="11" height="11" rx="2.5" fill="#39d353" class="c" style="animation-delay:1.166s"/>
-<rect x="776" y="80" width="11" height="11" rx="2.5" fill="#006d32" class="c" style="animation-delay:1.188s"/>
+<rect x="776" y="80" width="11" height="11" rx="2.5" fill="#26a641" class="c" style="animation-delay:1.188s"/>
 <rect class="target-glow" x="772" y="73" width="21" height="22" rx="5" fill="none" stroke="#b79b64"/>
 <g id="target-block" filter="url(#block-shadow)">
 <polygon id="target-top" points="776,80 787,80 791,76 780,76" fill="url(#block-top)"/>
@@ -1040,5 +1040,5 @@
 <rect x="138" y="175" width="11" height="11" rx="2.5" fill="#39d353"/>
 <rect x="152" y="175" width="11" height="11" rx="2.5" fill="#69f0a0"/>
 <text x="170" y="185" fill="#8b949e" font-size="8.5">More</text>
-<text x="787" y="185" text-anchor="end" fill="#c9d1d9" font-size="8.5" letter-spacing=".05">716 last-year contributions · current 25d · longest 25d (Jul 18–Aug 11) · best 54 (Jul 23)</text>
+<text x="787" y="185" text-anchor="end" fill="#c9d1d9" font-size="8.5" letter-spacing=".05">718 last-year contributions · current 25d · longest 25d (Jul 18–Aug 11) · best 54 (Jul 23)</text>
 </svg>
