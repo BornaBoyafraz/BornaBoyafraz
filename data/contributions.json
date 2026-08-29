@@ -1,17 +1,17 @@
 {
- "refreshed": "2026-08-28T23:36:34Z",
+ "refreshed": "2026-08-29T04:19:31Z",
  "user": "BornaBoyafraz",
- "total": 1324,
+ "total": 1325,
  "best": {
   "date": "2026-08-23",
   "count": 56
  },
- "streak_current": 42,
+ "streak_current": 43,
  "streak_current_start": "2026-07-18",
- "streak_current_end": "2026-08-28",
- "streak_longest": 42,
+ "streak_current_end": "2026-08-29",
+ "streak_longest": 43,
  "streak_longest_start": "2026-07-18",
- "streak_longest_end": "2026-08-28",
+ "streak_longest_end": "2026-08-29",
  "months": {
   "2025-08": 0,
   "2025-09": 0,
@@ -25,7 +25,7 @@
   "2026-05": 100,
   "2026-06": 5,
   "2026-07": 276,
-  "2026-08": 858
+  "2026-08": 859
  },
  "days": [
   {
@@ -1876,6 +1876,11 @@
   {
    "date": "2026-08-28",
    "count": 3,
+   "level": 1
+  },
+  {
+   "date": "2026-08-29",
+   "count": 1,
    "level": 1
   }
  ]
